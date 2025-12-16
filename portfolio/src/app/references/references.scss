@@ -1,0 +1,226 @@
+.references {
+    position: relative;
+    background-color: rgba(236, 224, 208, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    padding: 80px 0;
+
+    >h1 {
+        font-weight: 700;
+        font-size: 32px;
+        color: #9d5977;
+    }
+}
+
+
+.reference-boxes {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+
+    overflow: hidden;
+    padding-top: 40px; // ⬅️ Platz für das Quote
+}
+
+.reference-box {
+    border: 1px solid #9d5977;
+    flex: 0 0 632px; // ✅ exakt 632px breit (stabiler als width)
+    height: 274px;
+    border-radius: 32px;
+    background-color: rgba(157, 89, 119, 0.05);
+    padding: 48px 40px;
+    box-sizing: border-box;
+    transition: opacity 250ms ease, transform 250ms ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+
+    >p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+    }
+}
+
+.reference-box.side {
+    opacity: 0.35;
+    transform: scale(0.98);
+}
+
+.reference-box.active {
+    position: relative;
+}
+
+.quote {
+    position: absolute;
+    left: -24px;
+    top: -24px;
+    width: 89px;
+    height: 64px;
+}
+
+.quote-fixed {
+    position: absolute;
+    left: 50%;
+    top: 200px; // ggf. feinjustieren
+    transform: translateX(-316px) translateX(-24px); // 316 = 632/2, -24 = dein Offset
+    width: 89px;
+    height: 64px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.ref-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .ref-line {
+        flex: 1;
+        height: 1px;
+        background-color: black;
+        min-width: 80px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        white-space: nowrap;
+    }
+}
+
+/* links/rechts “leichter” wie in Vorlage */
+.reference-box.side {
+    opacity: 0.35;
+    transform: scale(0.98);
+    transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        transition: transform 250ms ease, filter 250ms ease;
+    }
+
+    .arrow-left {
+        transform: rotate(90deg);
+
+        &:hover {
+            transform: rotate(90deg) translateY(6px) scale(1.08);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+        }
+        &:active {
+            transform: rotate(90deg) translateY(0px) scale(1.08);
+        }
+    }
+
+    .arrow-right {
+        transform: rotate(270deg);
+
+        &:hover {
+            transform: rotate(270deg) translateY(6px) scale(1.08);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+        }
+
+        &:active {
+            transform: rotate(270deg) translateY(0px) scale(1.08);
+        }
+
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 100px;
+        background-color: black;
+        opacity: 0.3;
+        cursor: pointer;
+        transition: opacity 250ms ease, background-color 250ms ease, transform 250ms ease;
+    }
+
+    .dot.active {
+        opacity: 1;
+        background-color: #9d5977;
+        transform: scale(1.35);
+    }
+}
+
+.reference-box.active.active-0 {
+    animation: activeNice0 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.reference-box.active.active-1 {
+    animation: activeNice1 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.reference-box.active.active-2 {
+    animation: activeNice2 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.reference-box.active.active-3 {
+    animation: activeNice3 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes activeNice0 {
+    from {
+        opacity: 0.65;
+        transform: translateX(14px) scale(0.995);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes activeNice1 {
+    from {
+        opacity: 0.65;
+        transform: translateX(14px) scale(0.995);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes activeNice2 {
+    from {
+        opacity: 0.65;
+        transform: translateX(14px) scale(0.995);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes activeNice3 {
+    from {
+        opacity: 0.65;
+        transform: translateX(14px) scale(0.995);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}

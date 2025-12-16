@@ -1,0 +1,138 @@
+.header {
+    height: 98px;
+    padding: 0 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg,
+            rgb(236, 224, 208, 0.8) 10%,
+            rgb(236, 224, 208, 0) 100%);
+}
+
+.menu-div {
+    max-width: 1400px;
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    width: 133px;
+    height: 48px;
+    cursor: pointer;
+    background: url("./../../../assets/img/logo/logo.png") center / contain no-repeat;
+    transition: background-image 0.125s linear;
+
+    &:hover {
+        background-image: url("./../../../assets/img/logo/logo-hover.png");
+    }
+}
+
+.menu {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    
+}
+
+.menu-info {
+    height: 26px;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -3%;
+    &:hover {
+        cursor: pointer
+    }
+     &:active {
+    color: #9d5977;
+  }
+}
+
+
+
+.hover-dot {
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+.hover-dot::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9d5977;
+
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease;
+}
+
+.hover-dot:hover::after {
+  opacity: 1;
+}
+
+.hover-dot:active::after {
+  opacity: 1;
+}
+
+.language-switch {
+    width: 84px;
+    height: 28px;
+    border: 1px solid #9d5977;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        border-color: black;
+    }
+}
+
+.active-language_btn {
+    border: 1px solid #9d5977 !important;
+    background-color: #9d5977 !important;
+    color: black !important;
+    width: 48px !important;
+    height: 30px !important;
+    margin-left: -1px;
+    &:hover {
+        cursor: auto !important;
+    }
+}
+
+.language-switch_btn {
+    width: 44px;
+    height: 28px;
+    border-radius: 100%;
+    border: none;
+    color: #75485c;
+    background-color: transparent;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+
+    &:hover {
+        cursor: pointer;
+        color: #9d5977;
+    }
+
+}

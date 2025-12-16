@@ -1,0 +1,42 @@
+<section class="references">
+    <h1 class="fira">What my colleagues say about me</h1>
+    <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+
+    <div class="reference-boxes">
+        <!-- LINKS -->
+        <div class="reference-box side">
+            <p class="karla">{{ refs[leftIndex].text }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[leftIndex].author }}</p>
+            </div>
+        </div>
+
+        <!-- MITTE (ACTIVE) -->
+        <div class="reference-box active active-{{ currentIndex }}">
+            <p class="karla">{{ refs[currentIndex].text }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[currentIndex].author }}</p>
+            </div>
+        </div>
+
+        <!-- RECHTS -->
+        <div class="reference-box side">
+            <p class="karla">{{ refs[rightIndex].text }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[rightIndex].author }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrow-box">
+        <img class="arrow-left" src="./../../assets/icons/pfeil-nach-unten.png" alt="" (click)="prev()">
+
+        <div class="dot" *ngFor="let _ of refs; let i = index" [class.active]="i === currentIndex" (click)="goTo(i)">
+        </div>
+
+        <img class="arrow-right" src="./../../assets/icons/pfeil-nach-unten.png" alt="" (click)="next()">
+    </div>
+</section>

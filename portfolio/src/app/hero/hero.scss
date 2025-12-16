@@ -1,0 +1,229 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.title-text {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.title-name {
+    font-size: 128px;
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    line-height: 1;
+    margin-top: 0;
+}
+
+.title-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-banner {
+    position: absolute;
+    left: 50%;
+    bottom: 55px;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.075);
+    backdrop-filter: blur(2px);
+    --gap: 56px;
+    z-index: 2;
+}
+
+.marquee {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: var(--gap);
+}
+
+.marquee-inner {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    gap: 56px;
+    white-space: nowrap;
+    animation: scroll 150s linear infinite;
+}
+
+.marquee-inner span {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #9d5977;
+    z-index: 3 !important;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100%));
+    }
+}
+
+.hero-line-left {
+    background-color: #9d5977;
+    width: 1px;
+    height: 240px;
+    position: absolute;
+    bottom: 0px;
+    left: 96px;
+    z-index: 1;
+}
+
+.arrow-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 260px;
+    left: 81px;
+    width: 30px;
+    height: 48px;
+    border-radius: 32px;
+    border: 1px #9d5977 solid;
+    background-color: transparent;
+}
+
+.hero-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 96px;
+}
+
+.contact-icon-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-icon {
+    width: 42px;
+}
+
+
+.contact-email {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    transition: color 0.2s ease;
+    &:hover {
+        color: #9d5977;
+        cursor: pointer;
+    }
+}
+
+
+.hero-arrow {
+    height: 18px;
+}
+
+.hero-arrow {
+  height: 18px;
+  display: block;
+  animation: arrowFloat 1.2s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes arrowFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);   /* wie weit er hoch geht */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-line-right {
+    height: 186px;
+    width: 1px;
+    background-color: #9d5977;
+}
+
+.hover-dot {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* beide Icons gleich groß */
+.contact-icon,
+.contact-icon-hover {
+  width: 42px;
+  display: block;
+}
+
+.contact-icon {
+  transition: opacity 0.2s ease;
+}
+
+/* beim Hover ein-/ausblenden */
+.hover-dot:hover .contact-icon-hover {
+  opacity: 1;
+}
+
+.hover-dot:hover .contact-icon {
+  opacity: 0;
+}
+
+/* Hover-Icon oben drauf legen, aber versteckt */
+.contact-icon-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;    
+  transition: opacity 0.2s ease;
+}
+
+.hover-dot::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #9d5977;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.2s ease;
+}
+
+.hover-dot:hover::after {
+    opacity: 1;
+}
+
+.hover-dot:active::after {
+    opacity: 1;
+}
