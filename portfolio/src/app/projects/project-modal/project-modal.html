@@ -11,13 +11,18 @@
                 <h3 class="fira">What is this project about?</h3>
                 <p class="karla">{{ project.description }}</p>
                 <div class="stack">
-                    <span class="chip" *ngFor="let s of project.stack">{{ s }}</span>
+                    <div class="stack-item karla" *ngFor="let s of project.stack; let i = index">
+                        <img [src]="project.stackIMG[i]" [alt]="s" />
+                        <span>{{ s }}</span>
+                    </div>
                 </div>
             </div>
 
             <div class="actions">
-                <a *ngIf="project.githubUrl" class="btn" [href]="project.githubUrl" target="_blank">GitHub ↗</a>
-                <a *ngIf="project.liveUrl" class="btn" [href]="project.liveUrl" target="_blank">Live Test ↗</a>
+                <a *ngIf="project.githubUrl" class="btn karla" [href]="project.githubUrl" target="_blank">GitHub <img
+                        src="./../../../assets/icons/pfeil-nach-unten.png" alt=""></a>
+                <a *ngIf="project.liveUrl" class="btn karla" [href]="project.liveUrl" target="_blank">Live Test <img
+                        src="./../../../assets/icons/pfeil-nach-unten.png" alt=""> </a>
             </div>
 
         </div>

@@ -66,9 +66,7 @@
 
 
     </div>
-    <app-project-modal *ngIf="selectedIndex !== null" 
-    [project]="projects[selectedIndex]" (close)="closeModal()"
-        (next)="nextProject()"
-        (prev)="prevProject()">
+    <app-project-modal *ngIf="selectedIndex !== null" [project]="projects[selectedIndex]" (close)="closeModal()"
+        (next)="nextProject()" (prev)="prevProject()">
     </app-project-modal>
 </section>

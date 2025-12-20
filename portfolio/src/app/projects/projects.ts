@@ -6,6 +6,7 @@ type Project = {
   nr: string;
   title: string;
   stack: string[];
+  stackIMG: string[];
   description: string;
   imageUrl: string;
   githubUrl?: string;
@@ -20,15 +21,16 @@ type Project = {
 })
 export class Projects {
   showJoin = false;
-  showPokedex= false;
-  showInstagram= false;
-  showElPollo= false;
+  showPokedex = false;
+  showInstagram = false;
+  showElPollo = false;
 
   projects: Project[] = [
     {
       nr: '01',
       title: 'Join',
-      stack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      stack: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/typescript.svg', 'assets/icons/angular.svg', 'assets/icons/firebase.svg'],
       description: 'Task manager inspired by the Kanban system...',
       imageUrl: 'assets/img/poject-pics/Join.jpg',
       githubUrl: 'https://github.com/...',
@@ -38,6 +40,7 @@ export class Projects {
       nr: '02',
       title: 'Pokedex',
       stack: ['HTML', 'CSS', 'JavaScript', 'API'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg', 'assets/icons/api.svg'],
       description: 'Jump-and-run game with coins, enemies...',
       imageUrl: 'assets/img/poject-pics/pokedex.png'
     },
@@ -45,13 +48,15 @@ export class Projects {
       nr: '03',
       title: 'Instagram-Clon',
       stack: ['HTML', 'CSS', 'JavaScript'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
       description: 'Chat app with channels and threads...',
       imageUrl: 'assets/img/poject-pics/instagram-clon.png'
     },
-     {
+    {
       nr: '04',
       title: 'El Pollo Loco',
       stack: ['HTML', 'CSS', 'JavaScript'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
       description: 'Chat app with channels and threads...',
       imageUrl: 'assets/img/poject-pics/el-pollo-loco.jpg'
     }

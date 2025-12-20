@@ -5,6 +5,7 @@ export type Project = {
   nr: string;
   title: string;
   stack: string[];
+  stackIMG: string[];
   description: string;
   imageUrl: string;
   githubUrl?: string;
