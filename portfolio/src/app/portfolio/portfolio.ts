@@ -7,11 +7,12 @@ import { AboutMe } from './../about-me/about-me';
 import { Skills } from './../skills/skills';
 import { Projects } from './../projects/projects';
 import { References } from '../references/references';
+import { Contact } from '../contact/contact';
 
 
 @Component({
   selector: 'app-portfolio',
-  imports:[ Header,CommonModule, RouterOutlet, Hero, AboutMe, Skills, Projects, References],
+  imports:[ Header,CommonModule, RouterOutlet, Hero, AboutMe, Skills, Projects, References, Contact],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })

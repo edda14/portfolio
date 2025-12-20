@@ -1,0 +1,32 @@
+<div class="backdrop" (click)="onBackdropClick($event)">
+    <div class="modal" role="dialog" aria-modal="true">
+
+        <div class="left">
+            <div class="left-title">
+                <h1 class="nr karla">{{ project.nr }}</h1>
+                <h2 class="fira">{{ project.title }}</h2>
+            </div>
+
+            <div class="left-description">
+                <h3 class="fira">What is this project about?</h3>
+                <p class="karla">{{ project.description }}</p>
+                <div class="stack">
+                    <span class="chip" *ngFor="let s of project.stack">{{ s }}</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a *ngIf="project.githubUrl" class="btn" [href]="project.githubUrl" target="_blank">GitHub ↗</a>
+                <a *ngIf="project.liveUrl" class="btn" [href]="project.liveUrl" target="_blank">Live Test ↗</a>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <button class="close" type="button" (click)="close.emit()"></button>
+            <img [src]="project.imageUrl" [alt]="project.title" />
+            <button class="next" type="button" (click)="next.emit()">Next project <img
+                    src="./../../../assets/icons/pfeil-nach-unten.png" alt=""></button>
+        </div>
+    </div>
+</div>

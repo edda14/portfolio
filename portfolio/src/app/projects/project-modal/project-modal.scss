@@ -1,0 +1,130 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(236, 224, 208, 0.6);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    width: min(1250px, 92vw);
+    height: min(656px, 80vh);
+    border-radius: 28px;
+    background: rgba(236, 224, 208, 1);
+    border: 3px solid rgb(157, 89, 119);
+    padding: 32px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 28px;
+}
+
+.x {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 24px 24px;
+
+    >img {
+        width: 520px;
+        height: 370px;
+        border-radius: 30px;
+    }
+
+    .next {
+        background-color: transparent;
+        width: 151px;
+        height: 40px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+        transition: color 250ms ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        >img {
+            width: 24px;
+            transform: rotate(270deg);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+            transition: transform 250ms ease, filter 250ms ease;
+        }
+    &:hover {
+        color: black;
+        >img {
+            transform: rotate(270deg) translateY(6px) scale(1.08);
+        }
+    }
+    }
+    .close {
+        width: 34px;
+        height: 34px;
+        border: none;
+        background-color: transparent;
+        background-image:  url(./../../../assets/icons/xmark-black.svg);
+        transition: background-image 250ms ease, transform 250ms ease;
+        &:hover {
+        transform: scale(120%);
+           background-image:  url(./../../../assets/icons/xmark-pink.svg);
+        }
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px 24px;
+}
+
+.left-description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    >h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+    }
+    >p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+
+.left-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+      .nr {
+        font-size: 128px;
+        color:rgb(157, 89, 119);
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 2px;
+    }
+    >h2 {
+        font-size: 64px;
+        line-height: 80%;
+        letter-spacing: 3px;
+    }
+}

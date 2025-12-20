@@ -7,7 +7,8 @@
         </p>
         <div>
             <div class="project-list">
-                <div class="project border" (mouseenter)="showJoin = true" (mouseleave)="showJoin = false">
+                <div class="project border" (click)="openProject(0)" (mouseenter)="showJoin = true"
+                    (mouseleave)="showJoin = false">
                     <h3 class="fira">Join</h3>
                     <p class="tech karla">
                         <span>Angular</span>
@@ -17,7 +18,8 @@
                         <span>Firebase</span>
                     </p>
                 </div>
-                <div class="project" (mouseenter)="showPokedex = true" (mouseleave)="showPokedex = false">
+                <div class="project" (click)="openProject(1)" (mouseenter)="showPokedex = true"
+                    (mouseleave)="showPokedex = false">
                     <h3 class="fira">Pokedex</h3>
                     <p class="tech karla">
                         <span>HTML</span>
@@ -26,7 +28,8 @@
                         <span>API</span>
                     </p>
                 </div>
-                <div class="project border" (mouseenter)="showInstagram = true" (mouseleave)="showInstagram = false">
+                <div class="project border" (click)="openProject(2)" (mouseenter)="showInstagram = true"
+                    (mouseleave)="showInstagram = false">
                     <h3 class="fira">Instagram-clon</h3>
                     <p class="tech karla">
                         <span>HTML</span>
@@ -34,7 +37,8 @@
                         <span>JavaScript</span>
                     </p>
                 </div>
-                <div class="project border-bottom" (mouseenter)="showElPollo = true" (mouseleave)="showElPollo = false">
+                <div class="project border-bottom" (click)="openProject(3)" (mouseenter)="showElPollo = true"
+                    (mouseleave)="showElPollo = false">
                     <h3 class="fira">El Pollo Loco</h3>
                     <p class="tech karla">
                         <span>HTML</span>
@@ -50,10 +54,10 @@
                 <div class="pokedex project-pic" [class.is-visible]="showPokedex">
                     <img src="./../../assets/img/poject-pics/pokedex.png" alt="">
                 </div>
-                 <div class="instagram project-pic" [class.is-visible]="showInstagram">
+                <div class="instagram project-pic" [class.is-visible]="showInstagram">
                     <img src="./../../assets/img/poject-pics/instagram-clon.png" alt="">
                 </div>
-                 <div class="elpollo project-pic" [class.is-visible]="showElPollo">
+                <div class="elpollo project-pic" [class.is-visible]="showElPollo">
                     <img src="./../../assets/img/poject-pics/el-pollo-loco.jpg" alt="">
                 </div>
             </div>
@@ -62,4 +66,9 @@
 
 
     </div>
+    <app-project-modal *ngIf="selectedIndex !== null" 
+    [project]="projects[selectedIndex]" (close)="closeModal()"
+        (next)="nextProject()"
+        (prev)="prevProject()">
+    </app-project-modal>
 </section>
