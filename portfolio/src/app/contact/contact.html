@@ -16,22 +16,22 @@
 
     <div class="contact-form">
         <div class="form-box">
-            <form class="contact-form">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form"></form>
                 <div class="field">
                     <label class="fira">What's your name?</label>
-                    <input class="karla" type="text" />
+                    <input name="name" [(ngModel)]="contactData.name" class="karla" type="text" />
                     <small class="hint karla">Oops! It seems your name is missing</small>
                 </div>
 
                 <div class="field">
                     <label class="fira">What's your email?</label>
-                    <input class="karla" type="email" />
+                    <input name="email" [(ngModel)]="contactData.email" class="karla" type="email" />
                     <small class="hint karla">Hoppla! your email is required</small>
                 </div>
 
                 <div class="field">
                     <label class="fira">How can I help you?</label>
-                    <textarea class="karla"></textarea>
+                    <textarea name="message" [(ngModel)]="contactData.message" class="karla"></textarea>
                     <small class="hint texterea-hint karla">What do you need to develop?</small>
                 </div>
             </form>
@@ -50,9 +50,9 @@
                 <p class="karla error">Please accept the privacy policy.</p>
             </div>
             <div class="submit-box">
-                <button class="button">
-                    <span class="button-text">Say Hello ;)</span>
-                </button>
+               <button class="button" type="button" (click)="submitNativeForm()">
+  <span class="button-text">Say Hello ;)</span>
+</button>
             </div>
         </div>
     </div>

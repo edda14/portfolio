@@ -1,4 +1,4 @@
-<div class="backdrop" (click)="onBackdropClick($event)">
+<!-- <div class="backdrop" (click)="onBackdropClick($event)">
     <div class="modal" role="dialog" aria-modal="true">
 
         <div class="left">
@@ -33,5 +33,58 @@
             <button class="next" type="button" (click)="next.emit()">Next project <img
                     src="./../../../assets/icons/pfeil-nach-unten.png" alt=""></button>
         </div>
+    </div>
+</div> -->
+
+<div class="backdrop" (click)="onBackdropClick($event)">
+    <div class="modal" role="dialog" aria-modal="true">
+
+        <!-- Host bleibt gleich groß -->
+        <div class="swap-host">
+            <!-- ngFor mit 1 Element sorgt für enter/leave beim Wechsel -->
+            <div class="swap" *ngFor="let p of [project]; trackBy: trackByNr">
+
+                <!-- dein bisheriger Inhalt, nur project -> p -->
+                <div class="left">
+                    <div class="left-title">
+                        <h1 class="nr karla">{{ p.nr }}</h1>
+                        <h2 class="fira">{{ p.title }}</h2>
+                    </div>
+
+                    <div class="left-description">
+                        <h3 class="fira">What is this project about?</h3>
+                        <p class="karla">{{ p.description }}</p>
+
+                        <div class="stack">
+                            <div class="stack-item karla" *ngFor="let s of p.stack; let i = index">
+                                <img [src]="p.stackIMG[i]" [alt]="s" />
+                                <span>{{ s }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <a *ngIf="p.githubUrl" class="btn karla" [href]="p.githubUrl" target="_blank">
+                            GitHub <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
+                        </a>
+                        <a *ngIf="p.liveUrl" class="btn karla" [href]="p.liveUrl" target="_blank">
+                            Live Test <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <button class="close" type="button" (click)="close.emit()"></button>
+                    <div class="img-swap" [@contentFade]="p.imageUrl">
+                        <img [src]="p.imageUrl" [alt]="p.title" />
+                    </div>
+                    <button class="next" type="button" (click)="next.emit()">
+                        Next project <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>

@@ -18,16 +18,24 @@
 }
 
 .logo {
-    display: inline-block;
-    width: 133px;
-    height: 48px;
-    cursor: pointer;
-    background: url("./../../../assets/img/logo/logo.png") center / contain no-repeat;
-    transition: background-image 0.125s linear;
+  display: inline-block;
+  width: 180px;
+  height: 72px;
+  margin-left: -12px;
+  cursor: pointer;
 
-    &:hover {
-        background-image: url("./../../../assets/img/logo/logo-hover.png");
-    }
+  background-image: url("./../../../assets/img/logo/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  transition:
+    background-image 0.125s linear,
+    background-size 0.25s ease;
+
+  &:hover {
+    background-image: url("./../../../assets/img/logo/logo-hover.png");
+  }
 }
 
 .menu {

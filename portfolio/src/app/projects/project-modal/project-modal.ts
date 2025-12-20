@@ -1,27 +1,24 @@
-import { Component, EventEmitter, Input, Output  } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-export type Project = {
-  nr: string;
-  title: string;
-  stack: string[];
-  stackIMG: string[];
-  description: string;
-  imageUrl: string;
-  githubUrl?: string;
-  liveUrl?: string;
-};
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-project-modal',
-  imports: [CommonModule],
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './project-modal.html',
   styleUrl: './project-modal.scss',
+  animations: [
+    trigger('contentFade', [
+      transition('* <=> *', [
+        style({ opacity: 0 }),
+        animate('250ms ease', style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class ProjectModal {
- @Input({ required: true }) project!: Project;
-
+  @Input({ required: true }) project!: any;
   @Output() close = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
   @Output() prev = new EventEmitter<void>();
@@ -29,4 +26,7 @@ export class ProjectModal {
   onBackdropClick(e: MouseEvent) {
     if (e.target === e.currentTarget) this.close.emit();
   }
+
+  trackByNr = (_: number, p: any) => p?.nr;
+  trackByImg = (_: number, url: string) => url;
 }
