@@ -52,18 +52,24 @@
     gap: 24px;
     display: flex;
     align-items: center;
+    >a {
+      text-decoration: none;
+    }
 }
+
+
 
 .menu-text {
     font-size: 20px;
     font-weight: 400;
     line-height: 100%;
     letter-spacing: -3%;
+    color:black;
     &:hover {
         cursor: pointer
     }
      &:active {
-    color: #9d5977;
+    color: #9d5977 !important;
   }
 }
 

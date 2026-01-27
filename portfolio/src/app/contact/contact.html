@@ -16,27 +16,55 @@
 
     <div class="contact-form">
         <div class="form-box">
-            <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form"></form>
+            <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
                 <div class="field">
                     <label class="fira">What's your name?</label>
-                    <input name="name" [(ngModel)]="contactData.name" class="karla" type="text" />
+                    <input #name="ngModel" minlength="1"  name="name" [(ngModel)]="contactData.name" class="karla" type="text"
+                        required />
+                    @if (!name.valid && name.touched) {
                     <small class="hint karla">Oops! It seems your name is missing</small>
+                    }
                 </div>
 
                 <div class="field">
                     <label class="fira">What's your email?</label>
-                    <input name="email" [(ngModel)]="contactData.email" class="karla" type="email" />
+                    <input #email="ngModel" minlength="1"  name="email" [(ngModel)]="contactData.email" class="karla" type="email"
+                        required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                    @if (!email.valid && email.touched) {
                     <small class="hint karla">Hoppla! your email is required</small>
+                    }
                 </div>
 
                 <div class="field">
                     <label class="fira">How can I help you?</label>
-                    <textarea name="message" [(ngModel)]="contactData.message" class="karla"></textarea>
+                    <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
+                        class="karla" required></textarea>
+                    @if (!message.valid && message.touched){
                     <small class="hint texterea-hint karla">What do you need to develop?</small>
+                    }
+                </div>
+                <div class="form-check">
+                    <div class="privacy">
+                        <div class="check-box">
+                            <img src="./../../assets/icons/square-regular-full.svg" alt="">
+                            <img class="d-none" src="./../../assets/icons/square-check-regular-full.svg" alt="">
+                        </div>
+                        <div class="check-box-text">
+                            <p class="karla">I've read the</p>
+                            <div class="pink fira"><a href="privacy-policy">privacy policy</a></div>
+                            <p class="karla">and agree to the processing of my data as outlined</p>
+                        </div>
+                        <p class="karla error">Please accept the privacy policy.</p>
+                    </div>
+                    <div class="submit-box">
+                        <button type="submit" class="button">
+                            <span class="button-text">Say Hello ;)</span>
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
-        <div class="form-check">
+        <!-- <div class="form-check">
             <div class="privacy">
                 <div class="check-box">
                     <img src="./../../assets/icons/square-regular-full.svg" alt="">
@@ -50,10 +78,10 @@
                 <p class="karla error">Please accept the privacy policy.</p>
             </div>
             <div class="submit-box">
-               <button class="button" type="button" (click)="submitNativeForm()">
-  <span class="button-text">Say Hello ;)</span>
-</button>
+                <button class="button" type="button" (click)="submitNativeForm()">
+                    <span class="button-text">Say Hello ;)</span>
+                </button>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>

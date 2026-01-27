@@ -4,6 +4,7 @@ import { Footer } from './shared/footer/footer';
 import { Portfolio } from './portfolio/portfolio';
 
 
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Footer, Portfolio],

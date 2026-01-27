@@ -134,6 +134,8 @@
     writing-mode: sideways-lr;
     text-orientation: mixed;
     transition: color 0.2s ease;
+    color: black;
+    text-decoration: none;
     &:hover {
         color: #9d5977;
         cursor: pointer;
