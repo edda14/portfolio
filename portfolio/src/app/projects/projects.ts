@@ -31,7 +31,7 @@ export class Projects {
       title: 'Join',
       stack: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/typescript.svg', 'assets/icons/angular.svg', 'assets/icons/firebase.svg'],
-      description: 'Task manager inspired by the Kanban system...',
+      description: 'Join ist ein webbasiertes Task-Management-Tool, das sich am Kanban-Prinzip orientiert. Aufgaben lassen sich erstellen, organisieren und in verschiedene Arbeitsphasen verschieben.',
       imageUrl: 'assets/img/poject-pics/Join.jpg',
       githubUrl: 'https://github.com/...',
       liveUrl: 'https://...'
@@ -41,24 +41,30 @@ export class Projects {
       title: 'Pokedex',
       stack: ['HTML', 'CSS', 'JavaScript', 'API'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg', 'assets/icons/api.svg'],
-      description: 'Jump-and-run game with coins, enemies...',
-      imageUrl: 'assets/img/poject-pics/pokedex.png'
+      description: 'In diesem Projekt habe ich eine interaktive Pokédex-Webanwendung umgesetzt. Nutzer können die Pokémon durchsuchen, filtern und Detailinformationen abrufen.',
+      imageUrl: 'assets/img/poject-pics/pokedex.png',
+      githubUrl: 'https://github.com/...',
+      liveUrl: 'https://...'
     },
     {
       nr: '03',
       title: 'Instagram-Clon',
       stack: ['HTML', 'CSS', 'JavaScript'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
-      description: 'Chat app with channels and threads...',
-      imageUrl: 'assets/img/poject-pics/instagram-clon.png'
+      description: 'In diesem Projekt habe ich das Instagram-Design detailgetreu im Frontend nachgebaut. Fokus lag auf der UI-Umsetzung, Interaktionen wie Likes und Kommentare werden lokal im Browser gespeichert.',
+      imageUrl: 'assets/img/poject-pics/instagram-clon.png',
+      githubUrl: 'https://github.com/...',
+      liveUrl: 'https://...'
     },
     {
       nr: '04',
       title: 'El Pollo Loco',
       stack: ['HTML', 'CSS', 'JavaScript'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
-      description: 'Chat app with channels and threads...',
-      imageUrl: 'assets/img/poject-pics/el-pollo-loco.jpg'
+      description: 'In diesem Projekt habe ich ein klassisches Jump-and-Run-Spiel mit JavaScript umgesetzt. Fokus lag auf Spiellogik, Kollisionen, Animationen und einem flüssigen Spielerlebnis im Browser.',
+      imageUrl: 'assets/img/poject-pics/el-pollo-loco.jpg',
+      githubUrl: 'https://github.com/...',
+      liveUrl: 'https://...'
     }
   ];
 

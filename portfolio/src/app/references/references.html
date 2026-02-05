@@ -1,5 +1,5 @@
 <section class="references">
-    <h1 class="fira">What my colleagues say about me</h1>
+    <h1 class="fira">Was meine Kollegen über mich sagen</h1>
     <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
 
     <div class="reference-boxes">
@@ -32,11 +32,11 @@
     </div>
 
     <div class="arrow-box">
-        <img class="arrow-left" src="./../../assets/icons/pfeil-nach-unten.png" alt="" (click)="prev()">
+        <img class="arrow-left" src="./../../assets/icons/pfeil-nach-unten.png" aria-label="Vorherige Referenz" (click)="prev()">
 
-        <div class="dot" *ngFor="let _ of refs; let i = index" [class.active]="i === currentIndex" (click)="goTo(i)">
+        <div class="dot" *ngFor="let _ of refs; let i = index" [class.active]="i === currentIndex" (click)="goTo(i)" aria-label="Referenz {i} anzeigen">
         </div>
 
-        <img class="arrow-right" src="./../../assets/icons/pfeil-nach-unten.png" alt="" (click)="next()">
+        <img class="arrow-right" src="./../../assets/icons/pfeil-nach-unten.png" aria-label="Nächste Referenz" (click)="next()">
     </div>
 </section>

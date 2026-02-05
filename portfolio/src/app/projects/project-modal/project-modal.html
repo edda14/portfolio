@@ -1,41 +1,3 @@
-<!-- <div class="backdrop" (click)="onBackdropClick($event)">
-    <div class="modal" role="dialog" aria-modal="true">
-
-        <div class="left">
-            <div class="left-title">
-                <h1 class="nr karla">{{ project.nr }}</h1>
-                <h2 class="fira">{{ project.title }}</h2>
-            </div>
-
-            <div class="left-description">
-                <h3 class="fira">What is this project about?</h3>
-                <p class="karla">{{ project.description }}</p>
-                <div class="stack">
-                    <div class="stack-item karla" *ngFor="let s of project.stack; let i = index">
-                        <img [src]="project.stackIMG[i]" [alt]="s" />
-                        <span>{{ s }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="actions">
-                <a *ngIf="project.githubUrl" class="btn karla" [href]="project.githubUrl" target="_blank">GitHub <img
-                        src="./../../../assets/icons/pfeil-nach-unten.png" alt=""></a>
-                <a *ngIf="project.liveUrl" class="btn karla" [href]="project.liveUrl" target="_blank">Live Test <img
-                        src="./../../../assets/icons/pfeil-nach-unten.png" alt=""> </a>
-            </div>
-
-        </div>
-
-        <div class="right">
-            <button class="close" type="button" (click)="close.emit()"></button>
-            <img [src]="project.imageUrl" [alt]="project.title" />
-            <button class="next" type="button" (click)="next.emit()">Next project <img
-                    src="./../../../assets/icons/pfeil-nach-unten.png" alt=""></button>
-        </div>
-    </div>
-</div> -->
-
 <div class="backdrop" (click)="onBackdropClick($event)">
     <div class="modal" role="dialog" aria-modal="true">
 
@@ -52,7 +14,7 @@
                     </div>
 
                     <div class="left-description">
-                        <h3 class="fira">What is this project about?</h3>
+                        <h3 class="fira">Worum geht es in diesem Projekt?</h3>
                         <p class="karla">{{ p.description }}</p>
 
                         <div class="stack">
@@ -68,18 +30,18 @@
                             GitHub <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
                         </a>
                         <a *ngIf="p.liveUrl" class="btn karla" [href]="p.liveUrl" target="_blank">
-                            Live Test <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
+                            Live Test<img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
                         </a>
                     </div>
                 </div>
 
                 <div class="right">
-                    <button class="close" type="button" (click)="close.emit()"></button>
+                    <button class="close" type="button" (click)="close.emit()" aria-label="Projektansicht schließen"></button>
                     <div class="img-swap" [@contentFade]="p.imageUrl">
                         <img [src]="p.imageUrl" [alt]="p.title" />
                     </div>
                     <button class="next" type="button" (click)="next.emit()">
-                        Next project <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
+                       Nächstes Projekt<img src="./../../../assets/icons/pfeil-nach-unten.png" aria-label="Nächstes Projekt anzeigen">
                     </button>
                 </div>
 

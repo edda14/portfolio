@@ -1,0 +1,8 @@
+{
+  "nav": { "about": "About me", "skills": "Skills", "projects": "Projects" },
+  "hero": {
+    "role": "Frontend Developer",
+    "btnProjects": "My projects",
+    "btnContact": "Contact"
+  }
+}

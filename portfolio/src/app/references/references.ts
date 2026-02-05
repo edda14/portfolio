@@ -12,10 +12,10 @@ type RefItem = { text: string; author: string };
 })
 export class References {
   refs: RefItem[] = [
-    { text: 'Juls is blablablabla', author: 'E. Ertuk – Project Partner' },
-    { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione eum sint praesentium.', author: 'P. Weiss – Project Partner' },
-    { text: 'adipisicing elit. Quidem ratione eum sint praesentium.', author: 'K. Ekhart – Mentor' },
-    { text: 'Lorem ipsum dolor sit amet consectetur', author: 'F. Szceric – Partner' },
+    { text: 'Julia ist die Ruhe in Person. Sie nimmt sich Zeit, um Probleme wirklich zu verstehen und sauber zu analysieren – was in diesem Bereich unglaublich wichtig ist.', author: 'E. Ertuk – Projektpartner' },
+    { text: 'Wenn etwas nicht sofort funktioniert, bleibt Julia ruhig und sucht nach einer guten Lösung. Sie probiert aus, fragt nach und bringt am Ende Ordnung ins Chaos.', author: 'P. Weiss – Projektpartner' },
+    { text: 'Julia ist sehr neugierig und bleibt dran, bis sie Dinge wirklich versteht. Man merkt, dass sie Lust hat, besser zu werden – und das steckt an.', author: 'K. Ekhart – Mentor' },
+    { text: 'Die Zusammenarbeit war offen und unkompliziert. Julia kommuniziert klar, hört zu und macht es leicht, gemeinsam voranzukommen.', author: 'F. Szceric – Projektpartner' },
   ];
 
   currentIndex = 0;

@@ -85,6 +85,7 @@
         justify-content: center;
         gap: 16px;
 
+
         .hint {
             position: absolute;
             bottom: 52px;
@@ -180,6 +181,21 @@
     }
 }
 
+.field.field-message::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(157, 89, 119, 0.35);
+}
+
+.field.field-message:hover::after,
+.field.field-message:focus-within::after {
+    background-color: #9d5977;
+}
+
 .privacy {
     position: relative;
     display: flex;
@@ -206,6 +222,7 @@
 }
 
 .check-box-text {
+    width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -216,6 +233,29 @@
         line-height: 120%;
         font-weight: 400;
         padding-bottom: 8px;
+
+        >a {
+            color: #9d5977;
+            text-decoration: none;
+            font-weight: 400 !important;
+            letter-spacing: -3% !important;
+            padding: 0 3px 8px 3px;
+            margin: 0px -4px 0 -4px;
+            padding-bottom: 8px;
+            transition: all 250ms ease;
+            font-weight: 400 !important;
+            letter-spacing: -3% !important;
+            padding: 0 3px 8px 3px;
+            margin: 0px -4px 0 -4px;
+            padding-bottom: 8px;
+            transition: all 250ms ease;
+
+            &:hover {
+                cursor: pointer;
+                color: black;
+                border-bottom: 1px solid #9d5977;
+            }
+        }
     }
 
 
@@ -236,6 +276,12 @@
         >a {
             color: #9d5977;
             text-decoration: none;
+            font-weight: 400 !important;
+            letter-spacing: -3% !important;
+            padding: 0 3px 8px 3px;
+            margin: 0px -4px 0 -4px;
+            padding-bottom: 8px;
+            transition: all 250ms ease;
         }
     }
 }

@@ -1,15 +1,16 @@
 <section class="contact">
     <div class="contact-box">
         <div class="frame-1">
-            <p class="karla">Contact me</p>
-            <h1 class="fira">Let's work together</h1>
+            <p class="karla">Kontakt & Anfrage</p>
+            <h1 class="fira">Let’s work together</h1>
         </div>
         <div class="frame-2">
-            <h3 class="fira">Got a problem to solve?</h3>
-            <p class="karla">Encourage people to contact you and describe what role you are interested in. <br>
-                Show that you will add value to their projects through your work.
+            <h3 class="fira">Du suchst Unterstützung für ein Projekt?</h3>
+            <p class="karla">Ob konkrete Projektidee oder erste Gedanken:<br>
+                Schreib mir gern, worum es geht – ich freue mich auf den Austausch.
+
             </p>
-            <p class="karla">Need a Frontend developer? <span class="pink karla">Let's talk!</span></p>
+            <p class="karla">Interesse an einer Zusammenarbeit? <span class="pink karla">Let's talk!</span></p>
         </div>
 
     </div>
@@ -18,41 +19,44 @@
         <div class="form-box">
             <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
                 <div class="field">
-                    <label class="fira">What's your name?</label>
-                    <input #name="ngModel" minlength="1"  name="name" [(ngModel)]="contactData.name" class="karla" type="text"
-                        required />
+                    <label class="fira">Name</label>
+                    <input #name="ngModel" minlength="1" name="name" [(ngModel)]="contactData.name" class="karla"
+                        type="text" required />
                     @if (!name.valid && name.touched) {
-                    <small class="hint karla">Oops! It seems your name is missing</small>
+                    <small class="hint karla">Oops! Sieht aus als würde dein Name fehlen</small>
                     }
                 </div>
 
                 <div class="field">
-                    <label class="fira">What's your email?</label>
-                    <input #email="ngModel" minlength="1"  name="email" [(ngModel)]="contactData.email" class="karla" type="email"
-                        required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                    <label class="fira">Email-Adresse</label>
+                    <input #email="ngModel" minlength="1" name="email" [(ngModel)]="contactData.email" class="karla"
+                        type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
                     @if (!email.valid && email.touched) {
                     <small class="hint karla">Hoppla! your email is required</small>
                     }
                 </div>
 
-                <div class="field">
-                    <label class="fira">How can I help you?</label>
+                <div class="field field-message">
+                    <label class="fira">Worum geht es?</label>
                     <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
-                        class="karla" required></textarea>
+                        class="karla" class=" karla field field-message" required></textarea>
                     @if (!message.valid && message.touched){
                     <small class="hint texterea-hint karla">What do you need to develop?</small>
                     }
                 </div>
                 <div class="form-check">
                     <div class="privacy">
-                        <div class="check-box">
+                        <div class="check-box" type="checkbox">
                             <img src="./../../assets/icons/square-regular-full.svg" alt="">
                             <img class="d-none" src="./../../assets/icons/square-check-regular-full.svg" alt="">
                         </div>
                         <div class="check-box-text">
-                            <p class="karla">I've read the</p>
-                            <div class="pink fira"><a href="privacy-policy">privacy policy</a></div>
-                            <p class="karla">and agree to the processing of my data as outlined</p>
+                            <p class="karla privacy-text">
+                                Ich habe die
+                                <a href="/privacy-policy" class="link fira" aria-label="Datenschutzerklärung öffnen">
+                                    Datenschutzerklärung</a>
+                                gelesen und stimme der Verarbeitung meiner Daten zu.
+                            </p>
                         </div>
                         <p class="karla error">Please accept the privacy policy.</p>
                     </div>
