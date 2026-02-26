@@ -1,8 +1,192 @@
 {
-  "nav": { "about": "Über mich", "skills": "Skills", "projects": "Projekte" },
+  "nav": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte"
+  },
   "hero": {
     "role": "Frontend Entwicklerin",
     "btnProjects": "Meine Projekte",
-    "btnContact": "Kontakt"
+    "btnContact": "Kontakt",
+    "spanRole": "Frontend Entwicklerin",
+    "spanLoc": "Rosenheim",
+    "spanInf": "Offen für neue Projekte",
+    "spanRem": "Verfügbar für Remote-Arbeit"
+  },
+  "about": {
+    "sectionLabel": "Wer ich bin",
+    "introLabel": "Über mich",
+    "description": "Ich bin Frontend Entwicklerin aus Rosenheim (Bayern) mit einem Fokus auf saubere Strukturen, modernes UI und gut wartbaren Code. Mich begeistert die Verbindung aus Design und Technik – also Lösungen zu entwickeln, die nicht nur funktionieren, sondern sich auch intuitiv und hochwertig anfühlen. In meinen Projekten arbeite ich unter anderem mit Angular, TypeScript, HTML und SCSS. Dabei lege ich großen Wert auf klare Komponenten, verständlichen Code und eine gute Nutzererfahrung. Ich arbeite strukturiert, lerne gerne Neues und schätze ehrliches Feedback, sowohl im Team als auch im Entwicklungsprozess.",
+    "locationInfo": "Ich lebe in Rosenheim (Bayern) und arbeite überwiegend remote. Dabei bin ich auch offen für internationale Zusammenarbeit.",
+    "mindset": "Ich lerne gerne Neues, probiere Dinge aus und entwickle mich Schritt für Schritt weiter. Nicht aus Pflicht, sondern aus echtem Interesse.",
+    "workStyle": "Ich arbeite lösungsorientiert und denke logisch über Zusammenhänge nach. Recherche, Austausch mit anderen und das Lernen aus Fehlern helfen mir, Dinge klarer und einfacher zu gestalten."
+  },
+  "skills": {
+    "sectionLabel": "Technologie",
+    "introLabel": "Skill Set",
+    "description": "Ich arbeite mit modernen Frontend-Technologien zur Umsetzung strukturierter und responsiver Weboberflächen. Dabei lege ich Wert auf sauberen Code, Wiederverwendbarkeit und verständliche Lösungen.",
+    "offer": "Du brauchst ",
+    "offer1": "eine andere Fähigkeit",
+    "offer2": "Ich erweitere mein Skillset kontinuierlich und arbeite mich gerne in neue Themen ein.",
+    "offer3": "Du hast eine Idee oder ein Projekt? Ich freue mich über deine Nachricht.",
+    "growth": "Technologien, welche ich gerne lernen würde:"
+  },
+  "projects": {
+    "introLabel": "Ausgewählte Projekte",
+    "description": "Entdecke eine Auswahl meiner Projekte und probiere sie aus, um meine Arbeitsweise kennenzulernen.",
+    "text": "Worum geht es in diesem Projekt?",
+    "btn": "Nächstes Projekt"
+  },
+  "projectDescriptions": {
+    "join": "Join ist ein webbasiertes Task-Management-Tool, das sich am Kanban-Prinzip orientiert. Aufgaben lassen sich erstellen, organisieren und in verschiedene Arbeitsphasen verschieben.",
+    "pokedex": "In diesem Projekt habe ich eine interaktive Pokédex-Webanwendung umgesetzt. Nutzer können die Pokémon durchsuchen, filtern und Detailinformationen abrufen.",
+    "instagram": "In diesem Projekt habe ich das Instagram-Design detailgetreu im Frontend nachgebaut. Fokus lag auf der UI-Umsetzung, Interaktionen wie Likes und Kommentare werden lokal im Browser gespeichert.",
+    "pollo": "In diesem Projekt habe ich ein klassisches Jump-and-Run-Spiel mit JavaScript umgesetzt. Fokus lag auf Spiellogik, Kollisionen, Animationen und einem flüssigen Spielerlebnis im Browser."
+  },
+  "references": {
+    "0": {
+      "text": "Julia ist die Ruhe in Person. Sie nimmt sich Zeit, um Probleme wirklich zu verstehen und sauber zu analysieren, was in diesem Bereich unglaublich wichtig ist.",
+      "author": "E. Ertuk – Projektpartner"
+    },
+    "1": {
+      "text": "Wenn etwas nicht sofort funktioniert, bleibt Julia ruhig und sucht nach einer guten Lösung. Sie probiert aus, fragt nach und bringt am Ende Ordnung ins Chaos.",
+      "author": "P. Weiss – Projektpartner"
+    },
+    "2": {
+      "text": "Julia ist sehr neugierig und bleibt dran, bis sie Dinge wirklich versteht. Man merkt, dass sie Lust hat, besser zu werden und das steckt an.",
+      "author": "K. Ekhart – Mentor"
+    },
+    "3": {
+      "text": "Die Zusammenarbeit war offen und unkompliziert. Julia kommuniziert klar, hört zu und macht es leicht, gemeinsam voranzukommen.",
+      "author": "F. Szceric – Projektpartner"
+    }
+  },
+  "contact": {
+    "sectionLabel": "Kontakt & Anfrage",
+    "introLabel": "Du suchst Unterstützung für ein Projekt?",
+    "description": "Ob konkrete Projektidee oder erste Gedanken:",
+    "description2": "Schreib mir gern, worum es geht – ich freue mich auf den Austausch.",
+    "hint": "Interesse an einer Zusammenarbeit?",
+    "name": "Name",
+    "hintName": "Oops! Sieht aus als würde dein Name fehlen",
+    "mail": "Email-Adresse",
+    "hintMail": "Hoppla, deine Email-Adresse ist ungültig",
+    "text": "Worum geht es?",
+    "hintText": "Wobei brauchst du Hilfe?",
+    "privacy": "Ich habe die",
+    "privacy2": "Datenschutzerklärung",
+    "privacy3": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "hintPrivacy": "Bitte akzeptiere die Datenschutzerklärung"
+  },
+  "footer": {
+    "section": "Web Entwicklerin",
+    "legal": "Impressum"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "section1": {
+      "title": "1. Verantwortliche Stelle",
+      "line1": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+      "name": "Julia Schäffer",
+      "street": "Petersbergstraße 6",
+      "city": "83026 Rosenheim"
+    },
+    "section2": {
+      "title": "2. Allgemeine Hinweise",
+      "p1": "Der Schutz deiner persönlichen Daten ist mir wichtig.",
+      "p2": "Ich verarbeite personenbezogene Daten gemäß der Datenschutz-Grundverordnung (DSGVO) sowie den geltenden deutschen Datenschutzgesetzen.",
+      "p3": "In dieser Datenschutzerklärung wird erläutert, welche Daten auf dieser Website erhoben werden und zu welchem Zweck."
+    },
+    "section3": {
+      "title": "3. Kontaktformular",
+      "intro": "Wenn du mich über das Kontaktformular kontaktierst, werden die von dir eingegebenen Daten verarbeitet.",
+      "processedTitle": "Verarbeitete Daten:",
+      "data": "Name",
+      "data2": "Email-Adresse",
+      "data3": "Nachricht",
+      "purposeTitle": "Zweck der Verarbeitung:",
+      "purpose": "Die Daten werden ausschließlich zur Bearbeitung deiner Anfrage sowie möglicher Anschlussfragen verwendet.",
+      "legalTitle": "Rechtsgrundlage:",
+      "legal1": "Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen)",
+      "legal2": "Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation)",
+      "storageTitle": "Speicherdauer:",
+      "storage": "Die Daten werden gelöscht, sobald sie für den Zweck der Verarbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen.",
+      "sharingTitle": "Weitergabe von Daten:",
+      "sharing": "Eine Weitergabe deiner Daten an Dritte erfolgt nicht."
+    },
+    "section4": {
+      "title": "4. Hosting",
+      "intro": "Diese Website wird gehostet bei:",
+      "provider": "ALL-INKL.COM – Neue Medien Münnich",
+      "street": "Hauptstraße 68",
+      "city": "02742 Friedersdorf",
+      "country": "Germany",
+      "logIntro": "Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, darunter:",
+      "log": "Datum und Uhrzeit des Zugriffs",
+      "log2": "Browsertyp und Browserversion",
+      "log3": "Betriebssystem",
+      "purpose": "Diese Daten werden verarbeitet, um den reibungslosen Betrieb und die Sicherheit der Website sicherzustellen.",
+      "legalTitle": "Rechtsgrundlage:",
+      "legal": "Art. 6 Abs. 1 lit. f DSGVO"
+    },
+    "section5": {
+      "title": "5. Server-Logfiles",
+      "p1": "Der Hosting-Anbieter erhebt und speichert automatisch Informationen, die dein Browser übermittelt.",
+      "p2": "Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt."
+    },
+    "section6": {
+      "title": "6. Cookies und Tracking",
+      "text": "Diese Website verwendet keine Cookies und keine Tracking-Tools."
+    },
+    "section7": {
+      "title": "7. Google Fonts",
+      "p1": "Auf dieser Website werden Google Fonts lokal eingebunden.",
+      "p2": "Die Schriftarten sind auf dem eigenen Server gespeichert, sodass keine Verbindung zu Servern von Google hergestellt wird.",
+      "p3": "Es werden keine personenbezogenen Daten an Google übermittelt."
+    },
+    "section8": {
+      "title": "8. Deine Rechte",
+      "intro": "Du hast das Recht auf:",
+      "rights": "Auskunft über deine gespeicherten Daten (Art. 15 DSGVO)",
+      "rights2": "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+      "rights3": "Löschung deiner Daten (Art. 17 DSGVO)",
+      "rights4": "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+      "rights5": "Datenübertragbarkeit (Art. 20 DSGVO)",
+      "rights6": "Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+      "complaint": "Außerdem hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren."
+    },
+    "section9": {
+      "title": "9. Datensicherheit",
+      "text": "Diese Website nutzt eine SSL- bzw. TLS-Verschlüsselung, um übertragene Daten vor unbefugtem Zugriff zu schützen."
+    }
+  },
+  "imprint": {
+    "title": "Haftungsausschluss",
+    "section1": {
+      "title": "Impressum"
+    },
+    "section2": {
+      "title": "Nutzungsbedingungen",
+      "p1": "Diese Website ist ein persönliches, nicht-kommerzielles Portfolio.",
+      "p2": "Die Inhalte dienen ausschließlich zu Informationszwecken.",
+      "p3": "Durch die Nutzung dieser Website entsteht kein Vertragsverhältnis."
+    },
+    "section3": {
+      "title": "Über diese Website",
+      "p1": "Dieses Portfolio entstand im Rahmen meiner Weiterbildung zur Frontend-Entwicklerin.",
+      "p2": "Es zeigt eine Auswahl meiner Projekte, Fähigkeiten und Arbeitsweise."
+    },
+    "section4": {
+      "title": "Technologie",
+      "p1": "Diese Website wurde mit Angular, TypeScript, SCSS und nach Prinzipien des responsiven Webdesigns umgesetzt."
+    },
+    "section5": {
+      "title": "Credits",
+      "p1": "Design und Entwicklung: Developer Akademie & Julia Schäffer.",
+      "p2": "Icons und Schriftarten werden gemäß ihren jeweiligen Lizenzen verwendet."
+    },
+    "section6": {
+      "title": "Urheberrecht"
+    }
   }
 }

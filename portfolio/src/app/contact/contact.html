@@ -1,91 +1,73 @@
 <section class="contact">
-    <div class="contact-box">
-        <div class="frame-1">
-            <p class="karla">Kontakt & Anfrage</p>
-            <h1 class="fira">Let’s work together</h1>
-        </div>
-        <div class="frame-2">
-            <h3 class="fira">Du suchst Unterstützung für ein Projekt?</h3>
-            <p class="karla">Ob konkrete Projektidee oder erste Gedanken:<br>
-                Schreib mir gern, worum es geht – ich freue mich auf den Austausch.
-
-            </p>
-            <p class="karla">Interesse an einer Zusammenarbeit? <span class="pink karla">Let's talk!</span></p>
-        </div>
-
-    </div>
-
-    <div class="contact-form">
-        <div class="form-box">
-            <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
-                <div class="field">
-                    <label class="fira">Name</label>
-                    <input #name="ngModel" minlength="1" name="name" [(ngModel)]="contactData.name" class="karla"
-                        type="text" required />
-                    @if (!name.valid && name.touched) {
-                    <small class="hint karla">Oops! Sieht aus als würde dein Name fehlen</small>
-                    }
-                </div>
-
-                <div class="field">
-                    <label class="fira">Email-Adresse</label>
-                    <input #email="ngModel" minlength="1" name="email" [(ngModel)]="contactData.email" class="karla"
-                        type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-                    @if (!email.valid && email.touched) {
-                    <small class="hint karla">Hoppla! your email is required</small>
-                    }
-                </div>
-
-                <div class="field field-message">
-                    <label class="fira">Worum geht es?</label>
-                    <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
-                        class="karla" class=" karla field field-message" required></textarea>
-                    @if (!message.valid && message.touched){
-                    <small class="hint texterea-hint karla">What do you need to develop?</small>
-                    }
-                </div>
-                <div class="form-check">
-                    <div class="privacy">
-                        <div class="check-box" type="checkbox">
-                            <img src="./../../assets/icons/square-regular-full.svg" alt="">
-                            <img class="d-none" src="./../../assets/icons/square-check-regular-full.svg" alt="">
-                        </div>
-                        <div class="check-box-text">
-                            <p class="karla privacy-text">
-                                Ich habe die
-                                <a href="/privacy-policy" class="link fira" aria-label="Datenschutzerklärung öffnen">
-                                    Datenschutzerklärung</a>
-                                gelesen und stimme der Verarbeitung meiner Daten zu.
-                            </p>
-                        </div>
-                        <p class="karla error">Please accept the privacy policy.</p>
-                    </div>
-                    <div class="submit-box">
-                        <button type="submit" class="button">
-                            <span class="button-text">Say Hello ;)</span>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <!-- <div class="form-check">
-            <div class="privacy">
-                <div class="check-box">
-                    <img src="./../../assets/icons/square-regular-full.svg" alt="">
-                    <img class="d-none" src="./../../assets/icons/square-check-regular-full.svg" alt="">
-                </div>
-                <div class="check-box-text">
-                    <p class="karla">I've read the</p>
-                    <div class="pink fira">privacy policy</div>
-                    <p class="karla">and agree to the processing of my data as outlined</p>
-                </div>
-                <p class="karla error">Please accept the privacy policy.</p>
+    <div class="contact-div">
+        <div class="contact-box">
+            <div class="frame-1">
+                <p class="karla">{{ 'contact.sectionLabel' | translate }}</p>
+                <h1 class="fira">Let’s work together</h1>
             </div>
-            <div class="submit-box">
-                <button class="button" type="button" (click)="submitNativeForm()">
-                    <span class="button-text">Say Hello ;)</span>
-                </button>
+            <div class="frame-2">
+                <h3 class="fira">{{ 'contact.introLabel' | translate }}</h3>
+                <p class="karla">{{ 'contact.description' | translate }} <br> {{ 'contact.description2' | translate }}
+                </p>
+                <p class="karla">{{ 'contact.hint' | translate }} <span class="pink karla">Let's talk!</span></p>
             </div>
-        </div> -->
+
+        </div>
+
+        <div class="contact-form">
+            <div class="form-box">
+                <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
+                    <div class="field">
+                        <label class="fira">{{ 'contact.name' | translate }}</label>
+                        <input #name="ngModel" minlength="1" name="name" [(ngModel)]="contactData.name" class="karla"
+                            type="text" required />
+                        @if (!name.valid && name.touched) {
+                        <small class="hint karla">{{ 'contact.hintName' | translate }}</small>
+                        }
+                    </div>
+
+                    <div class="field">
+                        <label class="fira">{{ 'contact.mail' | translate }}</label>
+                        <input #email="ngModel" minlength="1" name="email" [(ngModel)]="contactData.email" class="karla"
+                            type="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                        @if (!email.valid && email.touched) {
+                        <small class="hint karla">{{ 'contact.hintMail' | translate }}</small>
+                        }
+                    </div>
+
+                    <div class="field field-message">
+                        <label class="fira">{{ 'contact.text' | translate }}</label>
+                        <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
+                            class="karla" class=" karla field field-message" required></textarea>
+                        @if (!message.valid && message.touched){
+                        <small class="hint texterea-hint karla">{{ 'contact.hintText' | translate }}</small>
+                        }
+                    </div>
+                    <div class="form-check">
+                        <div class="privacy">
+                            <div class="check-box" type="checkbox">
+                                <img src="./../../assets/icons/square-regular-full.svg" alt="">
+                                <img class="d-none" src="./../../assets/icons/square-check-regular-full.svg" alt="">
+                            </div>
+                            <div class="check-box-text">
+                                <p class="karla privacy-text">
+                                    {{ 'contact.privacy' | translate }}
+                                    <a href="/privacy-policy" class="link fira"
+                                        aria-label="Datenschutzerklärung öffnen">
+                                        {{ 'contact.privacy2' | translate }}</a>
+                                    {{ 'contact.privacy3' | translate }}
+                                </p>
+                            </div>
+                            <p class="karla error">{{ 'contact.hintPrivacy' | translate }}</p>
+                        </div>
+                        <div class="submit-box">
+                            <button type="submit" class="button">
+                                <span class="button-text">Say Hello ;)</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>

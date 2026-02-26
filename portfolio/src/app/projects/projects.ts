@@ -1,13 +1,14 @@
 import { Component, HostListener } from '@angular/core';
 import { ProjectModal } from './../../app/projects/project-modal/project-modal';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 type Project = {
   nr: string;
   title: string;
   stack: string[];
   stackIMG: string[];
-  description: string;
+  descriptionKey: string;
   imageUrl: string;
   githubUrl?: string;
   liveUrl?: string;
@@ -15,7 +16,7 @@ type Project = {
 
 @Component({
   selector: 'app-projects',
-  imports: [ProjectModal, CommonModule],
+  imports: [ProjectModal, CommonModule, TranslateModule],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
@@ -31,7 +32,7 @@ export class Projects {
       title: 'Join',
       stack: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/typescript.svg', 'assets/icons/angular.svg', 'assets/icons/firebase.svg'],
-      description: 'Join ist ein webbasiertes Task-Management-Tool, das sich am Kanban-Prinzip orientiert. Aufgaben lassen sich erstellen, organisieren und in verschiedene Arbeitsphasen verschieben.',
+      descriptionKey: 'projectDescriptions.join',
       imageUrl: 'assets/img/poject-pics/Join.jpg',
       githubUrl: 'https://github.com/...',
       liveUrl: 'https://...'
@@ -41,7 +42,7 @@ export class Projects {
       title: 'Pokedex',
       stack: ['HTML', 'CSS', 'JavaScript', 'API'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg', 'assets/icons/api.svg'],
-      description: 'In diesem Projekt habe ich eine interaktive Pokédex-Webanwendung umgesetzt. Nutzer können die Pokémon durchsuchen, filtern und Detailinformationen abrufen.',
+      descriptionKey: 'projectDescriptions.pokedex',
       imageUrl: 'assets/img/poject-pics/pokedex.png',
       githubUrl: 'https://github.com/...',
       liveUrl: 'https://...'
@@ -51,7 +52,7 @@ export class Projects {
       title: 'Instagram-Clon',
       stack: ['HTML', 'CSS', 'JavaScript'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
-      description: 'In diesem Projekt habe ich das Instagram-Design detailgetreu im Frontend nachgebaut. Fokus lag auf der UI-Umsetzung, Interaktionen wie Likes und Kommentare werden lokal im Browser gespeichert.',
+      descriptionKey: 'projectDescriptions.instagram',
       imageUrl: 'assets/img/poject-pics/instagram-clon.png',
       githubUrl: 'https://github.com/...',
       liveUrl: 'https://...'
@@ -61,7 +62,7 @@ export class Projects {
       title: 'El Pollo Loco',
       stack: ['HTML', 'CSS', 'JavaScript'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
-      description: 'In diesem Projekt habe ich ein klassisches Jump-and-Run-Spiel mit JavaScript umgesetzt. Fokus lag auf Spiellogik, Kollisionen, Animationen und einem flüssigen Spielerlebnis im Browser.',
+      descriptionKey: 'projectDescriptions.pollo',
       imageUrl: 'assets/img/poject-pics/el-pollo-loco.jpg',
       githubUrl: 'https://github.com/...',
       liveUrl: 'https://...'

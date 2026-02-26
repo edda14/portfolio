@@ -7,6 +7,7 @@
     justify-content: center;
     gap: 12px;
     text-align: center;
+    z-index: 999;
 }
 
 .title-text {
@@ -29,6 +30,7 @@
     justify-content: center;
     align-items: center;
     gap: 48px;
+    z-index: 999;
 }
 
 .hero-banner {
@@ -85,19 +87,13 @@
     background-color: #9d5977;
     width: 1px;
     height: 240px;
-    position: absolute;
-    bottom: 0px;
-    left: 96px;
     z-index: 1;
 }
 
 .arrow-btn {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 260px;
-    left: 81px;
     width: 30px;
     height: 48px;
     border-radius: 32px;
@@ -108,16 +104,16 @@
 .hero-contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center !important;
     gap: 24px;
     z-index: 1;
-    position: absolute;
-    bottom: 0;
-    right: 96px;
 }
 
 .contact-icon-div {
     display: flex;
+    align-items: center;
+
     flex-direction: column;
     gap: 10px;
 }
@@ -136,6 +132,7 @@
     transition: color 0.2s ease;
     color: black;
     text-decoration: none;
+
     &:hover {
         color: #9d5977;
         cursor: pointer;
@@ -148,22 +145,43 @@
 }
 
 .hero-arrow {
-  height: 18px;
-  display: block;
-  animation: arrowFloat 1.2s ease-in-out infinite;
+    height: 18px;
+    display: block;
+    animation: arrowFloat 1.2s ease-in-out infinite;
 }
 
-/* Animation */
 @keyframes arrowFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(6px);   /* wie weit er hoch geht */
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.line-div {
+    position: absolute;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: -webkit-fill-available;
+    bottom: 0px;
+    z-index: 0;
+    padding: 0 96px;
+
+}
+
+.line-left-div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
 }
 
 .hero-line-right {
@@ -173,39 +191,36 @@
 }
 
 .hover-dot {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
 }
 
-/* beide Icons gleich groß */
 .contact-icon,
 .contact-icon-hover {
-  width: 42px;
-  display: block;
+    width: 42px;
+    display: block;
 }
 
 .contact-icon {
-  transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
-/* beim Hover ein-/ausblenden */
 .hover-dot:hover .contact-icon-hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .hover-dot:hover .contact-icon {
-  opacity: 0;
+    opacity: 0;
 }
 
-/* Hover-Icon oben drauf legen, aber versteckt */
 .contact-icon-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;    
-  transition: opacity 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
 }
 
 .hover-dot::after {

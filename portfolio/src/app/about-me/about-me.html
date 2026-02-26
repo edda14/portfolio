@@ -3,38 +3,25 @@
         <img src="./../../assets/img/profile_picture/profile-pic.png" alt="Portrait von Julia Schäffer">
     </div>
     <div class="about-me-content">
-        <p class="karla">Wer ich bin</p>
+        <p class="karla">{{ 'about.sectionLabel' | translate }}</p>
         <div class="about-me-box">
-            <h1 class="fira">Über Mich</h1>
-            <h3 class="karla">Ich bin Frontend Entwicklerin aus Rosenheim (Bayern) mit einem Fokus auf saubere
-                Strukturen, modernes UI und gut wartbaren Code. <br>
-                Mich begeistert die Verbindung aus Design und Technik – also Lösungen zu entwickeln, die nicht nur
-                funktionieren, sondern sich auch intuitiv und hochwertig anfühlen. <br>
-                In meinen Projekten arbeite ich unter anderem mit Angular, TypeScript, HTML und SCSS. Dabei lege ich
-                großen Wert auf klare Komponenten, verständlichen Code und eine gute Nutzererfahrung. <br>
-                Ich arbeite strukturiert, lerne gerne Neues und schätze ehrliches Feedback, sowohl im Team als auch im
-                Entwicklungsprozess.
-
+            <h1 class="fira">{{ 'about.introLabel' | translate }}</h1>
+            <h3 class="karla">{{ 'about.description' | translate }}
             </h3>
             <div class="about-me-divs karla">
                 <div class="div">
                     <img src="../../assets/icons/location.svg" alt="">
-                    <p> Ich lebe in Rosenheim (Bayern) und arbeite überwiegend remote.
-                        Dabei bin ich auch offen für internationale Zusammenarbeit.
+                    <p> {{ 'about.locationInfo' | translate }}
                     </p>
                 </div>
                 <div class="div">
                     <img src="./../../assets/icons/spiral.svg" alt="">
-                    <p>Ich lerne gerne Neues, probiere Dinge aus und entwickle mich Schritt für Schritt weiter.
-                        Nicht aus Pflicht, sondern aus echtem Interesse.
+                    <p>{{ 'about.mindset' | translate }}
                     </p>
                 </div>
                 <div class="div">
                     <img src="./../../assets/icons/check.svg" alt="">
-                    <p>
-                        Ich arbeite lösungsorientiert und denke logisch über Zusammenhänge nach.
-                        Recherche, Austausch mit anderen und das Lernen aus Fehlern helfen mir, Dinge klarer und
-                        einfacher zu gestalten.
+                    <p>{{ 'about.workStyle' | translate }}
                     </p>
                 </div>
             </div>

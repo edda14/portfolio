@@ -1,12 +1,7 @@
 <div class="backdrop" (click)="onBackdropClick($event)">
     <div class="modal" role="dialog" aria-modal="true">
-
-        <!-- Host bleibt gleich groß -->
         <div class="swap-host">
-            <!-- ngFor mit 1 Element sorgt für enter/leave beim Wechsel -->
             <div class="swap" *ngFor="let p of [project]; trackBy: trackByNr">
-
-                <!-- dein bisheriger Inhalt, nur project -> p -->
                 <div class="left">
                     <div class="left-title">
                         <h1 class="nr karla">{{ p.nr }}</h1>
@@ -14,8 +9,8 @@
                     </div>
 
                     <div class="left-description">
-                        <h3 class="fira">Worum geht es in diesem Projekt?</h3>
-                        <p class="karla">{{ p.description }}</p>
+                        <h3 class="fira">{{ 'projects.text' | translate }}</h3>
+                        <p class="karla">{{ p.descriptionKey | translate }}</p>
 
                         <div class="stack">
                             <div class="stack-item karla" *ngFor="let s of p.stack; let i = index">
@@ -36,12 +31,14 @@
                 </div>
 
                 <div class="right">
-                    <button class="close" type="button" (click)="close.emit()" aria-label="Projektansicht schließen"></button>
+                    <button class="close" type="button" (click)="close.emit()"
+                        aria-label="Projektansicht schließen"></button>
                     <div class="img-swap" [@contentFade]="p.imageUrl">
                         <img [src]="p.imageUrl" [alt]="p.title" />
                     </div>
                     <button class="next" type="button" (click)="next.emit()">
-                       Nächstes Projekt<img src="./../../../assets/icons/pfeil-nach-unten.png" aria-label="Nächstes Projekt anzeigen">
+                        {{ 'projects.btn' | translate }}<img src="./../../../assets/icons/pfeil-nach-unten.png"
+                            aria-label="Nächstes Projekt anzeigen">
                     </button>
                 </div>
 

@@ -1,18 +1,24 @@
 <div class="header">
     <div class="menu-div">
         <div class="menu">
-            <div class="language-switch">
-                <button class="language-switch_btn active-language_btn fira" type="button" aria-label="Sprache auf Englisch umstellen" aria-pressed="true">
+            <div class="language-switch" [class.is-en]="lang.getCurrentLang() === 'en'">
+                <span class="pill" aria-hidden="true"></span>
+
+                <button (click)="setLang('en')" class="language-switch_btn fira"
+                    [class.active-language_btn]="lang.getCurrentLang() === 'en'" type="button">
                     EN
                 </button>
-                <button class="language-switch_btn fira" type="button" aria-label="Sprache auf Deutsch umstellen" aria-pressed="true">
+
+                <button (click)="setLang('de')" class="language-switch_btn fira"
+                    [class.active-language_btn]="lang.getCurrentLang() === 'de'" type="button">
                     DE
                 </button>
             </div>
             <div class="menu-info" aria-label="Hauptnavigation">
-                <a routerLink="/" fragment="about" class="menu-text hover-dot fira">Über Mich</a>
-                <a routerLink="/" fragment="skills" class="menu-text hover-dot fira">Skills</a>
-                <a routerLink="/" fragment="projects" class="menu-text hover-dot fira">Projekte</a>
+                <a routerLink="/" fragment="about" class="menu-text hover-dot fira">{{ 'nav.about' | translate }}</a>
+                <a routerLink="/" fragment="skills" class="menu-text hover-dot fira">{{ 'nav.skills' | translate }}</a>
+                <a routerLink="/" fragment="projects" class="menu-text hover-dot fira">{{ 'nav.projects' | translate
+                    }}</a>
             </div>
         </div>
         <a class="logo" routerLink="/" aria-label="Zur Startseite">

@@ -1,9 +1,9 @@
 <section class="imprint">
     <app-header></app-header>
     <div class="imprint-content">
-        <h1 class="fira">Haftungsausschluss</h1>
+        <h1 class="fira">{{ 'imprint.title' | translate}}</h1>
         <div class="imprint-text karla">
-            <h3 class="gap">Impressum</h3>
+            <h3 class="gap">{{ 'imprint.section1.title' | translate}}</h3>
             <div class="gap">
                 <li>
                     Julia Schäffer
@@ -18,30 +18,25 @@
                     juliaschaeffer96@gmail.com
                 </li>
             </div>
-            <h3>Nutzungsbedingungen</h3>
-            <p class="gap">Diese Website ist ein persönliches, nicht-kommerzielles Portfolio.<br>
-                Die Inhalte dienen ausschließlich zu Informationszwecken.<br>
-                Durch die Nutzung dieser Website entsteht kein Vertragsverhältnis.
-            <h3>Über diese Website</h3>
+            <h3>{{ 'imprint.section2.title' | translate}}</h3>
+            <p class="gap">{{ 'imprint.section2.p1' | translate}}<br>
+                {{ 'imprint.section2.p2' | translate}}<br>
+                {{ 'imprint.section2.p3' | translate}}
+            <h3>{{ 'imprint.section3.title' | translate}}</h3>
             <p class="gap">
-                Dieses Portfolio entstand im Rahmen meiner Weiterbildung zur Frontend-Entwicklerin.<br>
-                Es zeigt eine Auswahl meiner Projekte, Fähigkeiten und Arbeitsweise.</p>
-            <h3>Technologie</h3>
+                {{ 'imprint.section3.p1' | translate}}<br>
+                {{ 'imprint.section3.p2' | translate}}</p>
+            <h3>{{ 'imprint.section4.title' | translate}}</h3>
             <p class="gap">
-                Diese Website wurde mit Angular, TypeScript, SCSS und nach Prinzipien des responsiven Webdesigns
-                umgesetzt.
+                {{ 'imprint.section4.p1' | translate}}
             </p>
-            <h3>Credits</h3>
+            <h3>{{ 'imprint.section5.title' | translate}}</h3>
             <p class="gap">
-                Design und Entwicklung: Developer Akademie & Julia Schäffer.<br>
-                Icons und Schriftarten werden gemäß ihren jeweiligen Lizenzen verwendet.
+                {{ 'imprint.section5.p1' | translate}}<br>
+                {{ 'imprint.section5.p2' | translate}}
             </p>
-            <h3>Urheberrecht</h3>
+            <h3>{{ 'imprint.section6.title' | translate}}</h3>
             <p>© 2026 Julia Schäffer</p>
-
-
-
-
         </div>
     </div>
 </section>

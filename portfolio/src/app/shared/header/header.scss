@@ -1,20 +1,20 @@
 .header {
-    height: 98px;
-    padding: 0 96px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg,
-            rgb(236, 224, 208, 0.8) 10%,
-            rgb(236, 224, 208, 0) 100%);
+  height: 98px;
+  padding: 0 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,
+      rgb(236, 224, 208, 0.8) 10%,
+      rgb(236, 224, 208, 0) 100%);
 }
 
 .menu-div {
-    max-width: 1400px;
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1400px;
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -39,36 +39,39 @@
 }
 
 .menu {
-    max-width: 1400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
 }
 
 .menu-info {
-    height: 26px;
-    gap: 24px;
-    display: flex;
-    align-items: center;
-    >a {
-      text-decoration: none;
-    }
+  height: 26px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+
+  >a {
+    text-decoration: none;
+  }
 }
 
 
 
 .menu-text {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: -3%;
-    color:black;
-    &:hover {
-        cursor: pointer
-    }
-     &:active {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -3%;
+  color: black;
+
+  &:hover {
+    cursor: pointer
+  }
+
+  &:active {
     color: #9d5977 !important;
   }
 }
@@ -78,7 +81,7 @@
 .hover-dot {
   position: relative;
   cursor: pointer;
- 
+
 }
 
 .hover-dot::after {
@@ -105,48 +108,73 @@
 }
 
 .language-switch {
-    width: 84px;
-    height: 28px;
-    border: 1px solid #9d5977;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 84px;
+  height: 28px;
+  border: 1px solid #9d5977;
+  border-radius: 999px;
 
-    &:hover {
-        border-color: black;
-    }
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 
-.active-language_btn {
-    border: 1px solid #9d5977 !important;
-    background-color: #9d5977 !important;
-    color: black !important;
-    width: 48px !important;
-    height: 30px !important;
-    margin-left: -1px;
-    &:hover {
-        cursor: auto !important;
-    }
+  transition: border-color 200ms ease;
+
+  &:hover {
+    border-color: black;
+  }
+
+  .pill {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 999px;
+    background: rgba(157, 89, 119, 1);
+    transition: transform 250ms ease;
+    z-index: 0;
+  }
+
+  &.is-en .pill {
+    transform: translateX(0%);
+  }
+
+  &:not(.is-en) .pill {
+    transform: translateX(100%);
+  }
 }
 
 .language-switch_btn {
-    width: 44px;
-    height: 28px;
-    border-radius: 100%;
-    border: none;
-    color: #75485c;
-    background-color: transparent;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 17px;
+  position: relative;
+  z-index: 1;
 
-    &:hover {
-        cursor: pointer;
-        color: #9d5977;
-    }
+  width: 100%;
+  height: 100%;
 
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 17px;
+  color: #75485c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 200ms ease;
+
+  &:hover {
+    cursor: pointer;
+    color: #9d5977;
+  }
+
+  &.active-language_btn {
+    color: black; // falls du in Figma weiß willst
+  }
+}
+
+.language-switch_btn.active-language_btn {
+  cursor: default;
+  pointer-events: none; // <- verhindert hover/click komplet
 }

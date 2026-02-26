@@ -5,28 +5,28 @@
     <div class="reference-boxes">
         <!-- LINKS -->
         <div class="reference-box side">
-            <p class="karla">{{ refs[leftIndex].text }}</p>
+            <p class="karla">{{ refs[leftIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
-                <p class="karla">{{ refs[leftIndex].author }}</p>
+                <p class="karla">{{ refs[leftIndex].authorKey | translate }}</p>
             </div>
         </div>
 
         <!-- MITTE (ACTIVE) -->
         <div class="reference-box active active-{{ currentIndex }}">
-            <p class="karla">{{ refs[currentIndex].text }}</p>
+            <p class="karla">{{ refs[currentIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
-                <p class="karla">{{ refs[currentIndex].author }}</p>
+                <p class="karla">{{ refs[currentIndex].authorKey | translate }}</p>
             </div>
         </div>
 
         <!-- RECHTS -->
         <div class="reference-box side">
-            <p class="karla">{{ refs[rightIndex].text }}</p>
+            <p class="karla">{{ refs[rightIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
-                <p class="karla">{{ refs[rightIndex].author }}</p>
+                <p class="karla">{{ refs[rightIndex].authorKey | translate }}</p>
             </div>
         </div>
     </div>

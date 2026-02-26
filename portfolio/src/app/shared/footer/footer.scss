@@ -1,10 +1,19 @@
 .footer {
-    padding: 0px 96px 64px 96px;
-    background-color:  rgba(236, 224, 208, 1);
+    background-color: rgba(236, 224, 208, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 96px;
+}
+
+.footer-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+    width: -webkit-fill-available;
+    max-width: 1400px;
+    padding: 0 96px 64px 96px;
 }
 
 .logo-box {
@@ -16,24 +25,24 @@
 }
 
 .logo {
-  display: inline-block;
-  width: 180px;
-  height: 72px;
-  margin-left: -12px;
-  cursor: pointer;
+    display: inline-block;
+    width: 180px;
+    height: 72px;
+    margin-left: -12px;
+    cursor: pointer;
 
-  background-image: url("./../../../assets/img/logo/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+    background-image: url("./../../../assets/img/logo/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-  transition:
-    background-image 0.125s linear,
-    background-size 0.25s ease;
+    transition:
+        background-image 0.125s linear,
+        background-size 0.25s ease;
 
-  &:hover {
-    background-image: url("./../../../assets/img/logo/logo-hover.png");
-  }
+    &:hover {
+        background-image: url("./../../../assets/img/logo/logo-hover.png");
+    }
 }
 
 .text-box {
@@ -41,6 +50,7 @@
     flex-direction: column;
     align-items: start;
     gap: 8px;
+
     >p {
         font-size: 16px;
         font-weight: 400;
@@ -59,7 +69,8 @@
 }
 
 .link-box {
-    height: 100px;;
+    height: 100px;
+    ;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -72,6 +83,7 @@
         text-decoration: none;
         letter-spacing: 1px;
         transition: color 0.25s ease;
+
         &:hover {
             color: #9d5977 !important;
         }
@@ -79,9 +91,9 @@
 }
 
 .hover-dot {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .hover-dot::after {
@@ -101,4 +113,3 @@
 .hover-dot:hover::after {
     opacity: 1;
 }
-

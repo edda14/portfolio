@@ -1,8 +1,193 @@
 {
-  "nav": { "about": "About me", "skills": "Skills", "projects": "Projects" },
+  "nav": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
   "hero": {
     "role": "Frontend Developer",
     "btnProjects": "My projects",
-    "btnContact": "Contact"
+    "btnContact": "Contact",
+    "spanRole": "Frontend Developer",
+    "spanLoc": "Based in Rosenheim",
+    "spanInf": "Open for work",
+    "spanRem": "Available for remote work"
+  },
+  "about": {
+    "sectionLabel": "About Me",
+    "introLabel": "Who I Am",
+    "description": "I am a frontend developer from Rosenheim (Bavaria) with a focus on clean structures, modern UI, and maintainable code. I am passionate about combining design and technology, creating solutions that not only work but also feel intuitive and high-quality. In my projects I work with Angular, TypeScript, HTML, and SCSS, placing strong emphasis on clear components, readable code, and a great user experience. I work in a structured way, enjoy learning new things, and value honest feedback, both within a team and throughout the development process.",
+    "locationInfo": "I am based in Rosenheim (Bavaria) and mainly work remotely. I am also open to international collaboration.",
+    "mindset": "I enjoy learning new things, experimenting, and continuously improving step by step, not out of obligation, but out of genuine curiosity.",
+    "workStyle": "I approach problems in a solution-oriented and logical way. Research, collaboration, and learning from mistakes help me make things clearer, simpler, and more effective."
+  },
+  "skills": {
+    "sectionLabel": "Technology",
+    "introLabel": "Skill Set",
+    "description": "I work with modern frontend technologies to build structured and responsive web interfaces. I focus on clean code, reusability, and clear, maintainable solutions.",
+    "offer": "Do you need ",
+    "offer1": "a different skill",
+    "offer2": "I continuously expand my skill set and enjoy diving into new technologies.",
+    "offer3": "Do you have an idea or project? I’d love to hear from you.",
+    "growth": "Technologies I’d like to learn:"
+  },
+  "projects": {
+    "introLabel": "Selected Projects",
+    "description": "Explore a selection of my projects and interact with them to see my skills in action.",
+    "text": "What is this project about?",
+    "btn": "Next project"
+  },
+  "projectDescriptions": {
+    "join": "Join is a web-based task management tool built around the Kanban principle. Tasks can be created, organized, and moved through different workflow stages.",
+    "pokedex": "In this project I built an interactive Pokédex web app. Users can browse Pokémon, apply filters, and view detailed information.",
+    "instagram": "In this project I recreated Instagram’s design in the frontend as closely as possible. The focus was on UI implementation; likes and comments are stored locally in the browser.",
+    "pollo": "In this project I built a classic jump-and-run game using JavaScript. The focus was on game logic, collisions, animations, and smooth gameplay in the browser."
+  },
+  "references": {
+  "0": {
+    "text": "Julia is exceptionally calm. She takes time to truly understand problems and analyze them thoroughly which is incredibly important in this field.",
+    "author": "E. Ertuk – Project partner"
+  },
+  "1": {
+    "text": "If something doesn’t work right away, Julia stays calm and looks for a good solution. She experiments, asks questions, and ultimately brings order to chaos.",
+    "author": "P. Weiss – Project partner"
+  },
+  "2": {
+    "text": "Julia is very curious and keeps going until she truly understands things. You can tell she genuinely wants to improve and that’s contagious.",
+    "author": "K. Ekhart – Mentor"
+  },
+  "3": {
+    "text": "Working together was open and straightforward. Julia communicates clearly, listens well, and makes collaboration easy.",
+    "author": "F. Szceric – Project partner"
   }
+},
+"contact": {
+  "sectionLabel": "Contact",
+  "introLabel": "Got a problem to solve?",
+  "description": "Whether you have a specific project in mind or are still shaping your ideas:",
+  "description2": "feel free to get in touch. I look forward to the conversation.",
+  "hint": "Want to work together?",
+  "name": "Name",
+  "hintName": "Oops! It semmes like your name is missing.",
+  "mail": "Email",
+  "hintMail": "Hoppla, your email is required.",
+  "text": "How can i help you?",
+  "hintText": "What do you need to develop?",
+  "privacy": "I've read the",
+  "privacy2": "privacy policy",
+  "privacy3": "and agree to the processing of my data as outlined.",
+  "hintPrivacy": "please accept the privacy policy."
+},
+"footer": {
+  "section": "Frontend Developer",
+  "legal": "Legal notice"
+},
+"privacy": {
+  "title": "Privacy Policy",
+  "section1": {
+    "title": "1. Controller",
+    "line1": "The controller responsible for data processing on this website is:",
+    "name": "Julia Schäffer",
+    "street": "Petersbergstraße 6",
+    "city": "83026 Rosenheim"
+  },
+  "section2": {
+    "title": "2. General Information",
+    "p1": "The protection of your personal data is important to me.",
+    "p2": "I process personal data in accordance with the General Data Protection Regulation (GDPR) and applicable German data protection laws.",
+    "p3": "This privacy policy explains which data is collected on this website and for what purpose."
+  },
+  "section3": {
+    "title": "3. Contact Form",
+    "intro": "When you contact me via the contact form, the data you provide will be processed.",
+    "processedTitle": "Processed Data:",
+     "data": "Name",
+    "data2": "Email",
+    "data3": "Message",
+    "purposeTitle": "Purpose of Processing:",
+    "purpose": "The data is processed solely to handle your inquiry and possible follow-up questions.",
+    "legalTitle": "Legal Basis:",
+    "legal1": "Art. 6(1)(b) GDPR (pre-contractual measures)",
+    "legal2": "Art. 6(1)(f) GDPR (legitimate interest in communication)",
+    "storageTitle": "Storage Period:",
+    "storage": "The data will be deleted once it is no longer required for the purpose of processing and no legal retention obligations apply.",
+    "sharingTitle": "Data Sharing:",
+    "sharing": "Your data will not be shared with third parties."
+  },
+  "section4": {
+    "title": "4. Hosting",
+    "intro": "This website is hosted by:",
+    "provider": "ALL-INKL.COM – Neue Medien Münnich",
+    "street": "Hauptstraße 68",
+    "city": "02742 Friedersdorf",
+    "country": "Germany",
+    "logIntro": "The hosting provider automatically collects information in so-called server log files, including:",
+    "log": "Date and Time",
+    "log2": "Browsertype",
+    "log3": "System",
+    "purpose": "This data is processed to ensure the proper functioning and security of the website.",
+    "legalTitle": "Legal Basis:",
+    "legal": "Art. 6(1)(f) GDPR"
+  },
+  "section5": {
+    "title": "5. Server Log Files",
+    "p1": "The hosting provider automatically collects and stores information transmitted by your browser.",
+    "p2": "This data cannot be assigned to specific individuals and is not merged with other data sources."
+  },
+  "section6": {
+    "title": "6. Cookies and Tracking",
+    "text": "This website does not use cookies or tracking tools."
+  },
+  "section7": {
+    "title": "7. Google Fonts",
+    "p1": "Google Fonts are used locally on this website.",
+    "p2": "The fonts are hosted on the server itself, so no connection to Google servers is established.",
+    "p3": "No personal data is transmitted to Google."
+  },
+  "section8": {
+    "title": "8. Your Rights",
+    "intro": "You have the right to:",
+    "rights":  "Access your stored data (Art. 15 GDPR)",
+    "rights2": "Rectification of incorrect data (Art. 16 GDPR)",
+    "rights3": "Erasure of your data (Art. 17 GDPR)",
+    "rights4": "Restriction of processing (Art. 18 GDPR)",
+    "rights5": "Data portability (Art. 20 GDPR)",
+    "rights6": "Object to processing (Art. 21 GDPR)",
+    "complaint": "You also have the right to lodge a complaint with a supervisory authority."
+  },
+  "section9": {
+    "title": "9. Data Security",
+    "text": "This website uses SSL/TLS encryption to protect transmitted data from unauthorized access."
+  }
+},
+"imprint": {
+  "title": "Disclaimer",
+  "section1": {
+    "title": "Imprint"
+  },
+  "section2": {
+    "title": "Terms of Use",
+    "p1": "This website is a personal, non-commercial portfolio.",
+    "p2": "All content is provided for informational purposes only.",
+    "p3": "Using this website does not create any contractual relationship."
+  },
+  "section3": {
+    "title": "About This Website",
+    "p1": "This portfolio was created as part of my training as a frontend developer.",
+    "p2": "It showcases a selection of my projects, skills, and approach to work."
+  },
+
+  "section4": {
+    "title": "Technology",
+    "p1": "This website was built with Angular, TypeScript, and SCSS, following responsive web design principles."
+  },
+  "section5": {
+    "title": "Credits",
+    "p1": "Design and development: Developer Akademie & Julia Schäffer.",
+    "p2": "Icons and fonts are used in accordance with their respective licenses."
+  },
+  "section6": {
+    "title": "Copyright"
+  }
+}
 }

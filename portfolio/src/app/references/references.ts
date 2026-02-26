@@ -1,22 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
-type RefItem = { text: string; author: string };
+type RefItem = {
+  textKey: string;
+  authorKey: string;
+};
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './references.html',
   styleUrls: ['./references.scss'],
 })
 export class References {
-  refs: RefItem[] = [
-    { text: 'Julia ist die Ruhe in Person. Sie nimmt sich Zeit, um Probleme wirklich zu verstehen und sauber zu analysieren – was in diesem Bereich unglaublich wichtig ist.', author: 'E. Ertuk – Projektpartner' },
-    { text: 'Wenn etwas nicht sofort funktioniert, bleibt Julia ruhig und sucht nach einer guten Lösung. Sie probiert aus, fragt nach und bringt am Ende Ordnung ins Chaos.', author: 'P. Weiss – Projektpartner' },
-    { text: 'Julia ist sehr neugierig und bleibt dran, bis sie Dinge wirklich versteht. Man merkt, dass sie Lust hat, besser zu werden – und das steckt an.', author: 'K. Ekhart – Mentor' },
-    { text: 'Die Zusammenarbeit war offen und unkompliziert. Julia kommuniziert klar, hört zu und macht es leicht, gemeinsam voranzukommen.', author: 'F. Szceric – Projektpartner' },
-  ];
+ refs: RefItem[] = [
+  { textKey: 'references.0.text', authorKey: 'references.0.author' },
+  { textKey: 'references.1.text', authorKey: 'references.1.author' },
+  { textKey: 'references.2.text', authorKey: 'references.2.author' },
+  { textKey: 'references.3.text', authorKey: 'references.3.author' },
+];
 
   currentIndex = 0;
 

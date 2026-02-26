@@ -1,84 +1,90 @@
 <section class="hero">
-    <p class="title-text fira">Frontend Entwicklerin</p>
+    <p class="title-text fira">{{ 'hero.role' | translate }}</p>
 
     <p class="title-name karla">Julia Schäffer</p>
 
     <div class="title-actions">
         <button routerLink="/" fragment="projects" class="button">
-            <span class="button-text">Meine Projekte</span>
+            <span class="button-text">{{ 'hero.btnProjects' | translate }}</span>
         </button>
 
         <button routerLink="/" fragment="contact" class="button">
-            <span class="button-text">Kontakt</span>
+            <span class="button-text">{{ 'hero.btnContact' | translate }}</span>
         </button>
     </div>
     <div class="hero-banner">
         <div class="marquee">
             <div class="marquee-inner karla">
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
             </div>
             <div class="marquee-inner karla" aria-hidden="true">
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanRem' | translate }}</span><span>•</span>
 
-                <span>Frontend Entwicklerin</span><span>•</span>
-                <span>Aus Rosenheim</span><span>•</span>
-                <span>Offen für neue Projekte</span><span>•</span>
-                <span>Verfügbar für Remote-Arbeit</span><span>•</span>
+                <span>{{ 'hero.spanRole' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanLoc' | translate }}</span><span>•</span>
+                <span>{{ 'hero.spanInf' | translate }}</span><span>•</span>
+                <span>V{{ 'hero.spanRem' | translate }}</span><span>•</span>
             </div>
         </div>
     </div>
-    <div>
-        <div class="hero-line-left"></div>
-        <button class="arrow-btn"><img class="hero-arrow" src="./../../assets/icons/pfeil-nach-unten.png"
-                alt="Pfeil"></button>
-    </div>
-    <div class="hero-contact">
-        <a href="mailto:juliaschaeffer96@gmail.com
-         ?subject=Portfolio%20Contact
-         &body=Hello%20Julia," class="contact-email karla" aria-label="Send email to Julia Schäffer">juliaSchaeffer@gmail.com</a>
-        <div class="contact-icon-div">
-            <a href="https://github.com/edda14" class="hover-dot github" target="_blank" aria-label="GitHub Profil von Julia Schäffer">
-                <img class="contact-icon" src="./../../assets/icons/github.svg" alt="Github">
-                <img class="contact-icon-hover" src="./../../assets/icons/github-hover.svg" alt="Github">
-            </a>
-            <a href="https://www.linkedin.com/in/julia-sch%C3%A4ffer-563514201/" class="hover-dot linkedIn" target="_blank" aria-label="LinkedIn Profil von Julia Schäffer">
-                <img class="contact-icon" src="./../../assets/icons/linkedIn.svg" alt="LinkedIn">
-                <img class="contact-icon-hover" src="./../../assets/icons/linkedIn-hover.svg" alt="LinkedIn">
-            </a>
+    <div class="line-div">
+        <div class="line-left-div">
+            <div class="hero-line-left"></div>
+            <button class="arrow-btn"><img class="hero-arrow" src="./../../assets/icons/pfeil-nach-unten.png"
+                    alt="Pfeil"></button>
         </div>
+        <div class="hero-contact">
+            <a href="mailto:juliaschaeffer96@gmail.com
+         ?subject=Portfolio%20Contact
+         &body=Hello%20Julia," class="contact-email karla"
+                aria-label="Send email to Julia Schäffer">juliaSchaeffer@gmail.com</a>
+            <div class="contact-icon-div">
+                <a href="https://github.com/edda14" class="hover-dot github" target="_blank"
+                    aria-label="GitHub Profil von Julia Schäffer">
+                    <img class="contact-icon" src="./../../assets/icons/github.svg" alt="Github">
+                    <img class="contact-icon-hover" src="./../../assets/icons/github-hover.svg" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/julia-sch%C3%A4ffer-563514201/" class="hover-dot linkedIn"
+                    target="_blank" aria-label="LinkedIn Profil von Julia Schäffer">
+                    <img class="contact-icon" src="./../../assets/icons/linkedIn.svg" alt="LinkedIn">
+                    <img class="contact-icon-hover" src="./../../assets/icons/linkedIn-hover.svg" alt="LinkedIn">
+                </a>
+                <div class="hero-line-right"></div>
+            </div>
 
-        <div class="hero-line-right"></div>
+        </div>
     </div>
+
 
 </section>
