@@ -63,7 +63,9 @@
     font-display: swap;
 }
 
-
+body.no-scroll {
+  overflow: hidden;
+}
 
 * {
     margin: 0;

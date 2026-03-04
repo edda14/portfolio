@@ -36,7 +36,7 @@
         height: 370px;
         border-radius: 30px;
         box-shadow: 3px 3px 4px #6363635b;
-;
+        ;
 
     }
 
@@ -209,30 +209,130 @@
 }
 
 .swap-host {
-  grid-column: 1 / -1;  // ✅ spannt über beide Grid-Spalten der .modal
-  position: relative;
-  width: 100%;
-  height: 100%;
+    grid-column: 1 / -1; // ✅ spannt über beide Grid-Spalten der .modal
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .swap {
-  position: absolute;
-  inset: 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 28px;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 28px;
 }
 
 .img-swap {
-  position: relative;
-  width: 520px;
-  height: 370px;
+    position: relative;
+    width: 520px;
 }
 
-.img-swap > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  box-shadow: 3px 3px 4px #6363635b;
+.img-swap>img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 4px #6363635b;
+}
+
+.next-media {
+    display: none;
+}
+
+.close-media-div {
+    display: none;
+}
+
+@media (max-width:1400px) {
+    .swap {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal {
+        height: 80vh;
+        margin: 12px;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+    }
+
+    .next {
+        display: none !important;
+    }
+
+    .close {
+        display: none !important;
+    }
+
+    .next-media {
+        position: absolute;
+        bottom: 0px;
+        background-color: transparent;
+        width: 100%;
+        height: 40px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+        transition: color 250ms ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        >img {
+            width: 24px;
+            transform: rotate(270deg);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+            transition: transform 250ms ease, filter 250ms ease;
+        }
+
+        &:hover {
+            color: black;
+
+            >img {
+                transform: rotate(270deg) translateY(6px) scale(1.08);
+            }
+        }
+    }
+
+    .close-media-div {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .close-media {
+        width: 34px;
+        height: 34px;
+        border: none;
+        background-color: transparent;
+        background-image: url(./../../../assets/icons/xmark-black.svg);
+        transition: background-image 250ms ease, transform 250ms ease;
+
+        &:hover {
+            transform: scale(120%);
+            background-image: url(./../../../assets/icons/xmark-pink.svg);
+        }
+    }
+
+    .left {
+        padding: 0 24px;
+    }
+
+    .right {
+        padding: 0 24px;
+    }
 }

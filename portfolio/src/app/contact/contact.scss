@@ -19,8 +19,8 @@
 }
 
 .contact-box {
-    width: 568px;
-    height: 337px;
+    width: 616px;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -81,14 +81,14 @@
 .form-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 616px;
-    height: auto;
+    align-items: start;
+    width:-webkit-fill-available;
+    height: -webkit-fill-available;
     gap: 0; // wichtig: Linien laufen durch
 
     .field {
         position: relative;
-        padding: 32px !important; // Abstand zwischen den Linien
+        padding: 32px 0px!important; // Abstand zwischen den Linien
         display: flex;
         height: 100px !important;
         width: 616px;
@@ -325,4 +325,31 @@
 
 .d-none {
     display: none;
+}
+
+@media (max-width: 1400px) {
+    .contact-div {
+        align-items: center;
+        flex-direction: column;
+        gap: 64px !important;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        padding: 64px 96px 64px 96px;
+    }
+
+    .form-box {
+        width:-webkit-fill-available;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact-div {
+        padding: 64px 18px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact-div {
+        padding: 64px 18px !important;
+    }
 }

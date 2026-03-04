@@ -11,7 +11,7 @@
 .featured-projects {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    gap: 24px;
 
     >div {
         display: flex;
@@ -23,21 +23,20 @@
         color: #9d5977;
         font-weight: 700;
         font-size: 24px;
-        margin-bottom: 21px;
     }
 
     >h1 {
         font-weight: 700;
+        display: flex;
         font-size: 64px;
         letter-spacing: 3%;
         color: #9d5977;
-        margin-bottom: 41px;
     }
 
     >p {
         font-size: 18px;
         line-height: 120%;
-        margin-bottom: 41px;
+        margin-bottom: 24px;
     }
 }
 
@@ -185,4 +184,30 @@
         pointer-events: auto;
     }
 
+}
+
+@media (max-width: 1400px) {
+    .project-pics {
+        display: none;
+    }
+
+    .projects {
+        padding: 80px 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .featured-projects {
+        justify-content: center;
+        align-items: center !important;
+        width: 550px;
+        >h3 {
+            width: 100%;
+        }
+    }
+
+     .project {
+        width: 500px !important;
+    }
 }

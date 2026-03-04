@@ -2,7 +2,7 @@
     height: -webkit-fill-available;
     background-color: rgb(236, 224, 208);
     width: -webkit-fill-available;
-    padding: 100px 96px 100px 96px;
+    padding: 100px 96px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,6 +129,75 @@
             color: rgba(0, 0, 0, 1);
         }
     }
+}
+
+@media (max-width: 1400px) {
+
+    .about-me-title {
+        display: none;
+    }
+    .about-me {
+        flex-direction: column !important;
+        justify-content: center;
+        gap: 40px !important;
+    }
+
+    .photo {
+        margin-bottom: 0px !important;
+        width: 630px;
+
+        >img {
+            width: 630px;
+            height: 630px;
+        }
+    }
+
+    .about-me-content {
+        margin-top: 0px;
+    }
 
 
+
+    .about-me-box {
+        width: 566px !important;
+        height: -webkit-fill-available;
+    }
+
+    .photo::before {
+        content: "";
+        position: absolute;
+        z-index: 1; // zwischen Container (0) und Bild (2)
+        pointer-events: none;
+
+        /* ⬇️ hier legst du fest, wo die Linien sitzen sollen */
+        left: 0; // etwas aus dem Bild nach links raus
+        bottom: 0; // etwas nach unten raus
+        width: 100%; // nicht volle Breite
+        height: 100%;
+        border-radius: 30px; // nicht volle Höhe
+
+        background: none;
+    }
+
+
+    .about-me {
+        flex-direction: column;
+        align-items: stretch; // wichtig!
+        gap: 32px;
+    }
+
+    .photo {
+        align-self: flex-start; // links
+    }
+
+    .about-me-content {
+        align-self: flex-end; // rechts
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .about-me {
+         padding: 100px 16px;
+    }
 }

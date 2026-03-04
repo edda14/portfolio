@@ -1,4 +1,36 @@
 <div class="header">
+    <div class="menu-media-div">
+        <a class="logo-media" routerLink="/" aria-label="Zur Startseite">
+        </a>
+        <button class="menu-btn" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen"
+            aria-controls="mobileMenu" aria-label="Menü öffnen"></button>
+        <div class="backdrop" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+        <div id="mobileMenu" class="nav-mobile" [class.open]="menuOpen">
+            <a (click)="closeMenu()" routerLink="/" fragment="about" class="menu-text hover-dot fira">{{ 'nav.about' |
+                translate }}</a>
+            <a (click)="closeMenu()" routerLink="/" fragment="skills" class="menu-text hover-dot fira">{{ 'nav.skills' |
+                translate }}</a>
+            <a (click)="closeMenu()" routerLink="/" fragment="projects" class="menu-text hover-dot fira">{{
+                'nav.projects' | translate
+                }}</a>
+
+            <div class="language-switch" [class.is-en]="lang.getCurrentLang() === 'en'">
+                <span class="pill" aria-hidden="true"></span>
+
+                <button (click)="setLang('en')" class="language-switch_btn fira"
+                    [class.active-language_btn]="lang.getCurrentLang() === 'en'" type="button">
+                    EN
+                </button>
+
+                <button (click)="setLang('de')" class="language-switch_btn fira"
+                    [class.active-language_btn]="lang.getCurrentLang() === 'de'" type="button">
+                    DE
+                </button>
+            </div>
+        </div>
+
+    </div>
     <div class="menu-div">
         <div class="menu">
             <div class="language-switch" [class.is-en]="lang.getCurrentLang() === 'en'">

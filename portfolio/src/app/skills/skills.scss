@@ -91,9 +91,8 @@
 .icon-div {
     position: relative;
     width: 630px;
-    height: 429px;
+    height: -webkit-fill-available;
     display: flex;
-    flex-direction: auto;
     margin-top: 48px;
     flex-wrap: wrap;
     gap: 105px;
@@ -130,7 +129,7 @@
 .growth-div {
     z-index: 2;
     position: absolute;
-    bottom: -30px;
+    bottom: 135px;
     right: -30px;
     background-color: white;
     border-radius: 30px;
@@ -150,7 +149,8 @@
         color: #9d5977;
         font-size: 16px;
     }
-    >img{
+
+    >img {
         position: absolute;
         width: 30px;
         bottom: -20px;
@@ -195,12 +195,68 @@
     >p {
         transition: color 0.5s ease;
     }
+
     &:hover {
         .growth-div {
             opacity: 1;
         }
+
         >p {
             color: #9d5977;
         }
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .skills-sektion {
+        height: 100%;
+        padding: 0 100px;
+        flex-direction: column;
+        align-items: stretch; // wichtig: erlaubt align-self pro Kind
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .skill-set {
+        align-self: flex-start; // links
+    }
+
+    .icon-div {
+        width: 590px !important;
+        display: flex;
+        align-self: flex-end; // rechts
+        justify-content: center;
+        margin-top: 0px;
+
+    }
+
+    /* damit es nicht über den Screen hinausläuft */
+    .skills-box {
+        width: min(520px, 100%);
+    }
+
+    .icon-div {
+        height: fit-content;
+        padding: 32px 0px;
+        border: 1px solid #9d5977;
+        border-radius: 30px;
+        background-color: rgb(157, 89, 119, 0.05);
+    }
+
+    .growth-div {
+        right: 41px;
+        bottom: 16px;
+
+        >img {
+            right: 50px;
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .skills-sektion {
+        padding: 0 16px !important;
     }
 }
