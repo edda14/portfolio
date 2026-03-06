@@ -59,18 +59,10 @@
     position: relative;
 }
 
-.quote {
-    position: absolute;
-    left: -24px;
-    top: -24px;
-    width: 89px;
-    height: 64px;
-}
-
 .quote-fixed {
     position: absolute;
-    left: 50%;
-    top: 200px; // ggf. feinjustieren
+    left: -420px;
+    top: -10px; // ggf. feinjustieren
     transform: translateX(-316px) translateX(-24px); // 316 = 632/2, -24 = dein Offset
     width: 89px;
     height: 64px;
@@ -125,6 +117,7 @@
             transform: rotate(90deg) translateY(6px) scale(1.08);
             filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
         }
+
         &:active {
             transform: rotate(90deg) translateY(0px) scale(1.08);
         }
@@ -223,4 +216,104 @@
         opacity: 1;
         transform: translateX(0) scale(1);
     }
+}
+
+@media (max-width: 1400px) {
+    .reference-box {
+        flex: 0 0 600px;
+    }
+
+    .quote-fixed {
+        left: -387px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .reference-box {
+        flex: 0px 0px 450px;
+    }
+
+    .reference-boxes {
+        gap: 20px;
+    }
+
+    .references {
+        gap: 32px;
+
+        >h1 {
+            font-size: 24px;
+        }
+    }
+
+    .quote-fixed {
+        left: -343px;
+        top: -10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .references {
+        gap: 16px;
+    }
+
+    .reference-box {
+        flex: 0 0 400px;
+    }
+
+    .quote-fixed {
+        position: absolute;
+        top: -10px;
+        left: -136px;
+    }
+
+     .references {
+
+        >h1 {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .references {
+        >h1 {
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 0 18px;
+        }
+    }
+    .reference-box {
+        flex: 0 0 300px;
+        padding: 32px;
+        >p {
+            font-size: 16px;
+        }
+    }
+
+    .reference-boxes {
+        padding-top: 18px;;
+    }
+
+    .quote-fixed {
+        width: 32px;
+        position: absolute;
+        top: -30px;
+        left: 2px;
+    }
+
+    .ref-footer {
+        >p {
+            font-size: 16px;
+        }
+        .ref-line {
+            min-width: 20px;
+        }
+    }
+
+    .arrow-box{
+        >img {
+            width: 20px;
+            height: 20px;
+        }
+    } 
 }

@@ -1,8 +1,9 @@
 <section class="references">
     <h1 class="fira">Was meine Kollegen über mich sagen</h1>
-    <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+    
 
     <div class="reference-boxes">
+        <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
         <!-- LINKS -->
         <div class="reference-box side">
             <p class="karla">{{ refs[leftIndex].textKey | translate }}</p>
@@ -14,6 +15,7 @@
 
         <!-- MITTE (ACTIVE) -->
         <div class="reference-box active active-{{ currentIndex }}">
+            <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
             <p class="karla">{{ refs[currentIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
@@ -23,6 +25,7 @@
 
         <!-- RECHTS -->
         <div class="reference-box side">
+            <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
             <p class="karla">{{ refs[rightIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>

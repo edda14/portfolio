@@ -71,6 +71,9 @@
 
         span {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &::before {
                 content: "|";
@@ -129,7 +132,8 @@
 
 .pokedex {
     margin-top: -100px;
-     &::after {
+
+    &::after {
         top: 20px;
         right: -20px;
     }
@@ -171,7 +175,7 @@
 
 }
 
-.elpollo{
+.elpollo {
     margin-top: -90px;
 
     &::after {
@@ -197,17 +201,86 @@
 }
 
 @media (max-width: 1000px) {
+    .projects {
+        justify-content: center;
+        padding: 100px 42px;
+    }
 
     .featured-projects {
-        justify-content: center;
-        align-items: center !important;
+        justify-content: start;
+        align-items: center;
         width: 550px;
+
         >h3 {
             width: 100%;
         }
+
+        >h1 {
+            font-size: 56px;
+        }
     }
 
-     .project {
-        width: 500px !important;
+    .project {
+        width: 500px;
+    }
+}
+
+@media (max-width: 750px) {
+    .featured-projects {
+        width: 440px;
+    }
+
+    .project {
+        width: 390px;
+        padding: 32px;
+        flex-direction: column;
+        gap: 10px;
+
+        .tech {
+            margin-left: -12px;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .projects {
+        padding: 100px 18px;
+    }
+    .featured-projects {
+        width: 330px;
+        gap: 18px;
+
+        >h3 {
+            font-size: 16px;
+        }
+
+        >h1 {
+            font-size: 42px;
+        }
+
+        >p {
+            margin-bottom: 0px;
+            font-size: 16px;
+        }
+    }
+
+    .project {
+        width: -webkit-fill-available;
+        padding: 32px 0px;
+        .tech {
+            margin-left: -4px;
+            gap: 4px;
+
+            span {
+                &::before {
+                    margin-right: 4px;
+                }
+            }
+
+        }
+
+
     }
 }

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: -webkit-fill-available;
-    padding: 28px 0 100px 0 !important;
+    padding: 0px;
     width: 100vw;
     background: radial-gradient(circle 600px at 0% 50%,
             rgba(248, 202, 222, 1),
@@ -37,7 +37,7 @@
     background-color: rgb(157, 89, 119, 0.05);
     border-radius: 30px;
     border: 1px solid #9d5977;
-    padding: 32px;
+    padding: 24px 32px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -130,7 +130,7 @@
     z-index: 2;
     position: absolute;
     bottom: 135px;
-    right: -30px;
+    right: -138px;
     background-color: white;
     border-radius: 30px;
     width: 200px;
@@ -192,6 +192,8 @@
 }
 
 .growth-div-hover {
+    position: relative;
+
     >p {
         transition: color 0.5s ease;
     }
@@ -220,10 +222,11 @@
 
     .skill-set {
         align-self: flex-start; // links
+        gap: 40px;
     }
 
     .icon-div {
-        width: 590px !important;
+        width: 590px;
         display: flex;
         align-self: flex-end; // rechts
         justify-content: center;
@@ -231,22 +234,21 @@
 
     }
 
-    /* damit es nicht über den Screen hinausläuft */
     .skills-box {
         width: min(520px, 100%);
     }
 
     .icon-div {
         height: fit-content;
-        padding: 32px 0px;
+        padding: 24px 32px;
         border: 1px solid #9d5977;
         border-radius: 30px;
         background-color: rgb(157, 89, 119, 0.05);
     }
 
     .growth-div {
-        right: 41px;
-        bottom: 16px;
+        right: -12px;
+        bottom: 132px;
 
         >img {
             right: 50px;
@@ -257,6 +259,80 @@
 
 @media (max-width: 1000px) {
     .skills-sektion {
-        padding: 0 16px !important;
+        padding: 0 42px;
+    }
+
+    .icon-div {
+        gap: 62px;
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 750px) {
+    .skills-box {
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+
+        >h1 {
+            font-size: 54px;
+        }
+    }
+
+    .icon-div {
+        width: -webkit-fill-available;
+        padding: 24px 0px;
+        gap: 32px;
+    }
+
+    .font-size-18px {
+        text-align: start;
+    }
+}
+
+@media (max-width: 500px) {
+    .skills-sektion {
+        padding: 0px 18px !important;
+        gap: 18px;
+        align-items: center !important;
+    }
+
+    .skill-set {
+        align-self: center;
+        gap: 18px;
+
+        >h1 {
+            font-size: 16px;
+        }
+    }
+
+    .skills-box {
+        max-width: -webkit-fill-available;
+        gap: 18px;
+
+        >h1 {
+            font-size: 42px;
+        }
+
+        >p {
+            font-size: 16px;
+        }
+    }
+
+    .skill-box-contact {
+        width: -webkit-fill-available;
+
+        >h3 {
+            font-size: 20px;
+        }
+    }
+
+    .icon-div {
+        align-self: center;
+        max-width: -webkit-fill-available;
+        gap: 18px;
+    }
+
+    .growth-div {
+        padding: 18px;
     }
 }

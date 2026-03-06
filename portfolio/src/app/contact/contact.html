@@ -38,7 +38,7 @@
                     <div class="field field-message">
                         <label class="fira">{{ 'contact.text' | translate }}</label>
                         <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
-                            class="karla" class=" karla field field-message" required></textarea>
+                            class="karla" class="textfield karla" required></textarea>
                         @if (!message.valid && message.touched){
                         <small class="hint texterea-hint karla">{{ 'contact.hintText' | translate }}</small>
                         }

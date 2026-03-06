@@ -251,8 +251,8 @@
     }
 
     .modal {
-        height: 80vh;
-        margin: 12px;
+        height: 85vh;
+        width: 85vw;
     }
 
     img {
@@ -329,10 +329,143 @@
     }
 
     .left {
-        padding: 0 24px;
+        padding: 0px !important;
+        gap: 32px;
     }
 
     .right {
-        padding: 0 24px;
+        padding: 0px !important;
+    }
+
+    .nr {
+        font-size: 64px !important;
+    }
+
+    .left-title {
+        >h2 {
+            font-size: 54px !important;
+        }
+    }
+
+    .swap {
+        gap: 18px;
+    }
+
+    .img-swap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .img-swap {
+        width: fit-content;
+    }
+
+    .modal {
+        padding: 18px;
+    }
+
+    .nr {
+        font-size: 54px !important;
+    }
+
+    .left-title {
+        gap: 18px;
+
+        >h2 {
+            font-size: 42px !important;
+        }
+    }
+
+    .left {
+        gap: 18px !important;
+    }
+
+    .left-description {
+        gap: 18px;
+
+        >h3 {
+            font-size: 18px;
+        }
+
+        >p {
+            font-size: 16px;
+        }
+    }
+
+    .actions {
+
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .stack {
+        flex-wrap: wrap;
+        width: -webkit-fill-available;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        width: 87vw;
+        height: 90vh;
+    }
+
+    .btn {
+        height: 42px;
+        padding: 0 18px;
+        font-size: 16px;
+    }
+
+    .close-media {
+        width: 24px;
+        height: 24px;
+    }
+
+    .next-media {
+        font-size: 16px;
+        height: fit-content;
+
+        >img {
+            width: 18px;
+        }
+    }
+
+    .left {
+        gap: 12px !important;
+        justify-content: space-around !important;
+
+    }
+
+    .left-description {
+        gap: 24px !important;
+    }
+
+    .swap {
+        gap: 0px;
+    }
+}
+
+@media (min-height: 700px) {
+    .left-description {
+        gap: 12px !important;
+    }
+
+    .swap {
+        gap: 18px !important;
+        justify-content: center;
+    }
+
+    .img-swap {
+        >img {
+            width: 280px;
+        }
     }
 }

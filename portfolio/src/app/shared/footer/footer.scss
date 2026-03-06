@@ -27,7 +27,6 @@
     display: inline-block;
     width: 180px;
     height: 72px;
-    margin-left: -12px;
     cursor: pointer;
 
     background-image: url("./../../../assets/img/logo/logo.svg");
@@ -111,4 +110,51 @@
 
 .hover-dot:hover::after {
     opacity: 1;
+}
+
+.made-with-love-media {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .footer-div {
+        padding: 0px;
+    }
+
+    .made-with-love {
+        display: none;
+    }
+
+    .made-with-love-media {
+        display: contents;
+        >p {
+            font-size: 18px;
+            line-height: 120%;
+            font-weight: 400;
+            color: #9d5977;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 42px 42px 42px;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 0px 18px 18px 18px;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .logo-box {
+        gap: 8px;
+    }
 }

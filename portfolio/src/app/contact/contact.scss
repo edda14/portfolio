@@ -68,7 +68,7 @@
 
 .pink {
     color: #9d5977;
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
 .contact-form {
@@ -82,15 +82,15 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width:-webkit-fill-available;
+    width: -webkit-fill-available;
     height: -webkit-fill-available;
     gap: 0; // wichtig: Linien laufen durch
 
     .field {
         position: relative;
-        padding: 32px 0px!important; // Abstand zwischen den Linien
+        padding: 32px 0px; // Abstand zwischen den Linien
         display: flex;
-        height: 100px !important;
+        height: 100px;
         width: 616px;
         flex-direction: column;
         justify-content: center;
@@ -111,7 +111,7 @@
         }
 
         .texterea-hint {
-            bottom: 64px !important;
+            bottom: 64px;
         }
 
 
@@ -248,14 +248,14 @@
         >a {
             color: #9d5977;
             text-decoration: none;
-            font-weight: 400 !important;
-            letter-spacing: -3% !important;
+            font-weight: 400;
+            letter-spacing: -3%;
             padding: 0 3px 8px 3px;
             margin: 0px -4px 0 -4px;
             padding-bottom: 8px;
             transition: all 250ms ease;
-            font-weight: 400 !important;
-            letter-spacing: -3% !important;
+            font-weight: 400;
+            letter-spacing: -3%;
             padding: 0 3px 8px 3px;
             margin: 0px -4px 0 -4px;
             padding-bottom: 8px;
@@ -271,8 +271,8 @@
 
 
     >div {
-        font-weight: 400 !important;
-        letter-spacing: -3% !important;
+        font-weight: 400;
+        letter-spacing: -3%;
         padding: 0 3px 8px 3px;
         margin: 0px -4px 0 -4px;
         padding-bottom: 8px;
@@ -287,8 +287,8 @@
         >a {
             color: #9d5977;
             text-decoration: none;
-            font-weight: 400 !important;
-            letter-spacing: -3% !important;
+            font-weight: 400;
+            letter-spacing: -3%;
             padding: 0 3px 8px 3px;
             margin: 0px -4px 0 -4px;
             padding-bottom: 8px;
@@ -302,7 +302,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    transition: background-color 250ms ease !important;
+    transition: background-color 250ms ease;
     margin-bottom: 8px;
 
     >img {
@@ -331,25 +331,123 @@
     .contact-div {
         align-items: center;
         flex-direction: column;
-        gap: 64px !important;
+        gap: 64px;
         height: -webkit-fill-available;
         width: -webkit-fill-available;
         padding: 64px 96px 64px 96px;
     }
 
     .form-box {
-        width:-webkit-fill-available;
+        width: -webkit-fill-available;
     }
 }
 
 @media (max-width: 1000px) {
     .contact-div {
-        padding: 64px 18px !important;
+        padding: 64px 18px;
     }
 }
 
 @media (max-width: 1000px) {
     .contact-div {
-        padding: 64px 18px !important;
+        padding: 64px 18px;
     }
+}
+
+@media (max-width: 750px) {
+    .frame-1 {
+        >h1 {
+            font-size: 56px;
+        }
+    }
+
+    .form-box {
+        .field {
+            width: 440px;
+        }
+    }
+
+    .privacy {
+        width: 440px;
+    }
+
+    .contact-box {
+        width: 440px;
+    }
+
+    .contact-form {
+        align-items: center;
+    }
+
+    .form-check {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .submit-box {
+        width: 440px;
+    }
+}
+
+@media (max-width: 500px) {
+    .frame-1 {
+        gap: 18px;
+
+        >p {
+            font-size: 18px;
+        }
+    }
+
+    .contact-box {
+        gap: 18px;
+    }
+
+    .contact-div {
+        gap: 18px;
+    }
+
+    .form-box {
+        .field {
+            height: 50px;
+            padding: 22px 0px;
+            gap: 4px;
+            width: 300px !important;
+
+            label {
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .submit-box {
+        margin-top: 8px;
+    }
+
+    .field-message {
+        height: 150px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: start !important;
+        width: 300px !important;
+    }
+
+    .contact-box {
+        width: 300px !important;
+    }
+
+    .textfield {
+        height: 120px;
+    }
+
+    .privacy {
+        width: 300px !important;
+        height: -webkit-fill-available;
+        margin-top: 18px;;
+    }
+    .submit-box{
+        width: 300px;
+    }
+
 }

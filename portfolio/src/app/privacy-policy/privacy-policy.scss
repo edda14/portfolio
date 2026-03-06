@@ -72,3 +72,32 @@
         color: #75485c !important;
     }
 }
+
+@media (max-width: 1000px) {
+    .privacy-policy-content{
+        padding: 42px;
+        gap: 42px;
+        >h1 {
+            font-size: 54px !important;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .privacy-policy-content {
+        padding: 18px;
+        gap: 18px;
+        >h1 {
+            font-size: 36px !important
+            ;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .privacy-policy-content {
+        >h1 {
+            font-size: 24px !important;
+        }
+    }
+}
