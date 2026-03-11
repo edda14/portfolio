@@ -12,7 +12,7 @@ import { Contact } from '../contact/contact';
 
 @Component({
   selector: 'app-portfolio',
-  imports:[ Header,CommonModule, RouterOutlet, Hero, AboutMe, Skills, Projects, References, Contact],
+  imports:[ Header,CommonModule, Hero, AboutMe, Skills, Projects, References, Contact],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })
