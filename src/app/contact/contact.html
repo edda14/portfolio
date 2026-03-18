@@ -1,0 +1,91 @@
+<section class="contact">
+    <div class="contact-div">
+        <div class="contact-box">
+            <div class="frame-1">
+                <p class="karla">{{ 'contact.sectionLabel' | translate }}</p>
+                <h1 class="fira">Let’s work together</h1>
+            </div>
+            <div class="frame-2">
+                <h3 class="fira">{{ 'contact.introLabel' | translate }}</h3>
+                <p class="karla">{{ 'contact.description' | translate }} <br> {{ 'contact.description2' | translate }}
+                </p>
+                <p class="karla">{{ 'contact.hint' | translate }} <span class="pink karla">Let's talk!</span></p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="form-box">
+                <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
+                    <div class="field">
+                        <label class="fira">{{ 'contact.name' | translate }}</label>
+                        <input #name="ngModel" minlength="1" name="name" [(ngModel)]="contactData.name" class="karla"
+                            type="text" required (focus)="nameFocused = true" (blur)="nameFocused = false"
+                            [placeholder]="'contact.placeholderName' | translate" />
+                        @if (!name.valid && submitAttempted && !nameFocused) {
+                        <small class="hint karla">{{ 'contact.hintName' | translate }}</small>
+                        }
+                    </div>
+                    <div class="field">
+                        <label class="fira">{{ 'contact.mail' | translate }}</label>
+                        <input #email="ngModel" name="email" [(ngModel)]="contactData.email" class="karla" type="email"
+                            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            (focus)="emailFocused = true" (blur)="emailFocused = false"
+                            [placeholder]="'contact.placeholderMail' | translate" />
+                        @if (!email.valid && submitAttempted && !emailFocused) {
+                        <small class="hint karla">{{ 'contact.hintMail' | translate }}</small>
+                        }
+                    </div>
+                    <div class="field field-message">
+                        <label class="fira">{{ 'contact.text' | translate }}</label>
+                        <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
+                            class="textfield karla" required (focus)="messageFocused = true"
+                            (blur)="messageFocused = false"
+                            [placeholder]="'contact.placeholderText' | translate"></textarea>
+                        @if (!message.valid && submitAttempted && !messageFocused) {
+                        <small class="hint texterea-hint karla">{{ 'contact.hintText' | translate }}</small>
+                        }
+                    </div>
+                    <div class="form-check">
+                        <div class="privacy">
+                            <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"
+                                required hidden />
+
+                            <div class="check-box" (click)="privacy.control.setValue(!privacy.value)">
+                                @if (!privacy.value) {
+                                <img src="./../../assets/icons/square-regular-full.svg" alt="">
+                                }
+                                @if (privacy.value) {
+                                <img src="./../../assets/icons/square-check-regular-full.svg" alt="">
+                                }
+                            </div>
+                            <div class="check-box-text">
+                                <p class="karla privacy-text">
+                                    {{ 'contact.privacy' | translate }}
+                                    <a href="/privacy-policy" class="link fira"
+                                        aria-label="Datenschutzerklärung öffnen">
+                                        {{ 'contact.privacy2' | translate }}</a>
+                                    {{ 'contact.privacy3' | translate }}
+                                </p>
+                            </div>
+
+                            @if (!privacy.valid && submitAttempted) {
+                            <p class="karla error">{{ 'contact.hintPrivacy' | translate }}</p>
+                            }
+                        </div>
+                        <div class="submit-box">
+                            <button type="submit" class="button">
+                                <span class="button-text">Say Hello ;)</span>
+                            </button>
+                        </div>
+                        <div class="successDiv">
+                             @if (messageSent) {
+                            <p class="success-message karla">
+                                {{ 'contact.success' | translate }}
+                            </p>
+                            }
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

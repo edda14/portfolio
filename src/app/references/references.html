@@ -1,0 +1,40 @@
+<section class="references">
+    <h1 class="fira">Was meine Kollegen über mich sagen</h1>
+    <div class="reference-boxes" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+        <div class="reference-box side">
+            <p class="karla">{{ refs[leftIndex].textKey | translate }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[leftIndex].authorKey | translate }}</p>
+            </div>
+        </div>
+        <div class="reference-box active active-{{ currentIndex }}">
+            <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+            <p class="karla">{{ refs[currentIndex].textKey | translate }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[currentIndex].authorKey | translate }}</p>
+            </div>
+        </div>
+        <div class="reference-box side">
+            <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+            <p class="karla">{{ refs[rightIndex].textKey | translate }}</p>
+            <div class="ref-footer">
+                <div class="ref-line"></div>
+                <p class="karla">{{ refs[rightIndex].authorKey | translate }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-box">
+        <img class="arrow-left" src="./../../assets/icons/pfeil-nach-unten.png" aria-label="Vorherige Referenz"
+            (click)="prev()">
+
+        <div class="dot" *ngFor="let _ of refs; let i = index" [class.active]="i === currentIndex" (click)="goTo(i)"
+            aria-label="Referenz {i} anzeigen">
+        </div>
+
+        <img class="arrow-right" src="./../../assets/icons/pfeil-nach-unten.png" aria-label="Nächste Referenz"
+            (click)="next()">
+    </div>
+</section>

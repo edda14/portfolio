@@ -1,0 +1,468 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(236, 224, 208, 0.6);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    min-width: min(1260px, 92vw);
+    height: min(656px, 80vh);
+    border-radius: 28px;
+    background: rgba(236, 224, 208, 1);
+    border: 3px solid rgb(157, 89, 119);
+    padding: 32px;
+    position: relative;
+    gap: 28px;
+}
+
+.x {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 24px 24px;
+
+    >img {
+        width: 520px;
+        height: 370px;
+        border-radius: 30px;
+        box-shadow: 3px 3px 4px #6363635b;
+    }
+
+    .next {
+        background-color: transparent;
+        width: max-content;
+        height: 40px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+        transition: color 250ms ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        >img {
+            width: 24px;
+            transform: rotate(270deg);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+            transition: transform 250ms ease, filter 250ms ease;
+        }
+
+        &:hover {
+            color: black;
+
+            >img {
+                transform: rotate(270deg) translateY(6px) scale(1.08);
+            }
+        }
+    }
+
+    .close {
+        width: 34px;
+        height: 34px;
+        border: none;
+        background-color: transparent;
+        background-image: url(./../../../assets/icons/xmark-black.svg);
+        transition: background-image 250ms ease, transform 250ms ease;
+
+        &:hover {
+            transform: scale(120%);
+            background-image: url(./../../../assets/icons/xmark-pink.svg);
+        }
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px 24px;
+}
+
+.left-description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    >h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+    }
+
+    >p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+
+.left-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+
+    .nr {
+        font-size: 128px;
+        color: rgb(157, 89, 119);
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 2px;
+    }
+
+    >h2 {
+        font-size: 64px;
+        line-height: 80%;
+        letter-spacing: 3px;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 32px;
+}
+
+.btn {
+    color: black;
+    border: 1px solid black;
+    border-radius: 80px;
+    padding: 0px 24px;
+    height: 48px;
+    width: 100px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 120%;
+
+    >img {
+        width: 18px;
+        transform: rotate(230deg);
+        filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+        transition: all 250ms ease;
+    }
+
+    &:hover {
+        color: rgb(157, 89, 119);
+        border-color: rgb(157, 89, 119);
+
+        >img {
+            transform: translateY(-3px) translateX(3px) rotate(230deg);
+            ;
+        }
+    }
+}
+
+.chip {
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    >img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+
+    }
+}
+
+.stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 480px;
+    gap: 16px;
+}
+
+.swap-host {
+    grid-column: 1 / -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swap {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 28px;
+}
+
+.img-swap {
+    position: relative;
+    width: 520px;
+}
+
+.img-swap>img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 4px #6363635b;
+}
+
+.next-media {
+    display: none;
+}
+
+.close-media-div {
+    display: none;
+}
+
+@media (max-width:1400px) {
+    .swap {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+    }
+
+    .next {
+        display: none !important;
+    }
+
+    .close {
+        display: none !important;
+    }
+
+    .next-media {
+        position: absolute;
+        bottom: 0px;
+        background-color: transparent;
+        width: 100%;
+        height: 40px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        color: rgb(157, 89, 119);
+        transition: color 250ms ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        >img {
+            width: 24px;
+            transform: rotate(270deg);
+            filter: brightness(0) saturate(100%) invert(46%) sepia(20%) saturate(1200%) hue-rotate(285deg) brightness(90%) contrast(90%);
+            transition: transform 250ms ease, filter 250ms ease;
+        }
+
+        &:hover {
+            color: black;
+
+            >img {
+                transform: rotate(270deg) translateY(6px) scale(1.08);
+            }
+        }
+    }
+
+    .close-media-div {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .close-media {
+        width: 34px;
+        height: 34px;
+        border: none;
+        background-color: transparent;
+        background-image: url(./../../../assets/icons/xmark-black.svg);
+        transition: background-image 250ms ease, transform 250ms ease;
+
+        &:hover {
+            transform: scale(120%);
+            background-image: url(./../../../assets/icons/xmark-pink.svg);
+        }
+    }
+
+    .left {
+        padding: 0px !important;
+        gap: 32px;
+    }
+
+    .right {
+        padding: 0px !important;
+    }
+
+    .nr {
+        font-size: 64px !important;
+    }
+
+    .left-title {
+        >h2 {
+            font-size: 54px !important;
+        }
+    }
+
+    .swap {
+        gap: 18px;
+    }
+
+    .img-swap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .img-swap {
+        width: fit-content;
+    }
+
+    .modal {
+        padding: 18px;
+    }
+
+    .nr {
+        font-size: 54px !important;
+    }
+
+    .left-title {
+        gap: 18px;
+
+        >h2 {
+            font-size: 42px !important;
+        }
+    }
+
+    .left {
+        gap: 18px !important;
+    }
+
+    .left-description {
+        gap: 18px;
+
+        >h3 {
+            font-size: 18px;
+        }
+
+        >p {
+            font-size: 16px;
+        }
+    }
+
+    .actions {
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .stack {
+        flex-wrap: wrap;
+        width: -webkit-fill-available;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        min-width: 85%;
+        min-height: 80vh;
+    }
+
+    .btn {
+        height: 42px;
+        padding: 0 18px;
+        font-size: 16px;
+    }
+
+    .close-media {
+        width: 24px;
+        height: 24px;
+    }
+
+    .next-media {
+        font-size: 16px;
+        height: fit-content;
+
+        >img {
+            width: 18px;
+        }
+    }
+
+    .left {
+        gap: 12px !important;
+        justify-content: space-around !important;
+
+    }
+
+    .left-description {
+        gap: 24px !important;
+    }
+
+    .swap {
+        gap: 0px;
+    }
+}
+
+@media (min-height: 700px) {
+    .left-description {
+        gap: 12px !important;
+    }
+
+    .swap {
+        gap: 18px !important;
+        justify-content: center;
+    }
+
+    .img-swap {
+        >img {
+            width: 280px;
+        }
+    }
+}
