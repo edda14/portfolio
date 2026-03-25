@@ -407,6 +407,37 @@ textarea:-webkit-autofill:focus {
 }
 
 @media (max-width: 500px) {
+    .form-box {
+        .field {
+            .hint {
+                font-size: 14px;
+                bottom: 8px;
+            }
+        }
+    }
+
+    .privacy{
+        >p {
+            font-size: 14px;
+        }
+    }
+
+    .privacy-text {
+        flex-direction: column;
+        align-items: start;
+        gap: 0px;
+        padding-bottom: 12px;
+    }
+
+    .check-box-text {
+        >p {
+            >a {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
     .frame-1 {
         gap: 18px;
 
@@ -442,7 +473,7 @@ textarea:-webkit-autofill:focus {
     }
 
     .submit-box {
-        margin-top: 8px;
+        margin-top: 24px;
     }
 
     .field-message {
@@ -464,8 +495,7 @@ textarea:-webkit-autofill:focus {
     .privacy {
         width: 300px !important;
         height: auto;
-        margin-top: 18px;
-        ;
+        margin-top: 8px;
     }
 
     .submit-box {

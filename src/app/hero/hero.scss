@@ -347,10 +347,6 @@
     .title-actions {
         gap: 24px;
     }
-
-    .marquee-track {
-        animation: marquee-scroll 50s linear infinite;
-    }
 }
 
 @media (max-width: 500px) {
