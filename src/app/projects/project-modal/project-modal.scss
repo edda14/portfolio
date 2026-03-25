@@ -355,15 +355,16 @@
         justify-content: center;
 
         >img {
-            width: 250px;
+            width: 300px;
         }
     }
 }
 
 @media (max-width: 800px) {
-
     .img-swap {
-        width: fit-content;
+        >img {
+            width: 250px;
+        }
     }
 
     .modal {
@@ -405,7 +406,7 @@
 
     .stack {
         flex-wrap: wrap;
-        width: -webkit-fill-available;
+        width: fit-content;
     }
 }
 
@@ -448,21 +449,36 @@
     .swap {
         gap: 0px;
     }
-}
-
-@media (min-height: 700px) {
-    .left-description {
-        gap: 12px !important;
-    }
-
-    .swap {
-        gap: 18px !important;
-        justify-content: center;
-    }
 
     .img-swap {
         >img {
-            width: 280px;
+            width: 180px;
         }
     }
+}
+
+@media (max-height: 720px) {
+    .left {
+        max-height: 330px;
+        /* wichtig! sonst weiß der Browser nicht, wann er scrollen soll */
+        overflow-y: auto;
+        /* zeigt Scrollbar nur wenn nötig */
+
+
+}
+
+.left-description {
+    gap: 12px !important;
+}
+
+.swap {
+    gap: 18px !important;
+    justify-content: center;
+}
+
+.img-swap {
+    >img {
+        width: 180px;
+    }
+}
 }

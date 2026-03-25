@@ -64,7 +64,7 @@ export class Projects {
       stack: ['HTML', 'CSS', 'JavaScript'],
       stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
       descriptionKey: 'projectDescriptions.pollo',
-      imageUrl: 'assets/img/poject-pics/el-pollo-loco.jpg',
+      imageUrl: 'assets/img/poject-pics/el-pollo-loco.png',
       githubUrl: 'https://github.com/edda14/elpollo',
       liveUrl: 'https://edda14.github.io/elpollo/'
     }

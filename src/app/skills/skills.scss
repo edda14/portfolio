@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     height: auto;
-    padding: 0px;
+    padding: 100px 0px;
     width: 100vw;
     background: radial-gradient(circle 600px at 0% 50%,
             rgba(248, 202, 222, 1),
@@ -20,7 +19,7 @@
 }
 
 .skill-set {
-    >h1 {
+    >h2 {
         font-size: 24px;
         font-weight: 700;
         color: #9d5977;
@@ -45,7 +44,7 @@
     justify-content: start;
     gap: 26px;
 
-    >h1 {
+    >h2 {
         font-weight: 700;
         font-size: 64px;
         letter-spacing: 2;
@@ -96,7 +95,7 @@
     display: flex;
     margin-top: 48px;
     flex-wrap: wrap;
-    gap: 105px;
+    gap: 69px;
 }
 
 .icon {
@@ -127,7 +126,7 @@
 }
 
 .growth-div {
-    z-index: 2;
+    z-index: -2;
     position: absolute;
     bottom: 135px;
     right: -138px;
@@ -197,12 +196,20 @@
         transition: color 0.5s ease;
     }
 
-    &:hover {
-        .growth-div {
-            opacity: 1;
-        }
+    .growth-div {
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
 
-        >p {
+    >img:hover~.growth-div,
+    >p:hover~.growth-div {
+        z-index: 999;
+        opacity: 1;
+    }
+
+    >img:hover,
+    >p:hover {
+        ~p {
             color: #9d5977;
         }
     }
@@ -214,20 +221,20 @@
         height: auto;
         padding: 0 100px;
         flex-direction: column;
-        align-items: stretch; // wichtig: erlaubt align-self pro Kind
+        align-items: stretch;
         justify-content: space-between;
         gap: 40px;
     }
 
     .skill-set {
-        align-self: flex-start; // links
+        align-self: flex-start;
         gap: 40px;
     }
 
     .icon-div {
         width: 590px;
         display: flex;
-        align-self: flex-end; // rechts
+        align-self: flex-end;
         justify-content: center;
         margin-top: 0px;
 
@@ -271,7 +278,7 @@
         height: auto;
         width: auto;
 
-        >h1 {
+        >h2 {
             font-size: 54px;
         }
     }
@@ -298,7 +305,7 @@
         align-self: center;
         gap: 18px;
 
-        >h1 {
+        >h2 {
             font-size: 16px;
         }
     }
@@ -307,7 +314,7 @@
         max-width: 100%;
         gap: 18px;
 
-        >h1 {
+        >h2 {
             font-size: 42px;
         }
 

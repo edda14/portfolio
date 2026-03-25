@@ -3,7 +3,7 @@
         <div class="contact-box">
             <div class="frame-1">
                 <p class="karla">{{ 'contact.sectionLabel' | translate }}</p>
-                <h1 class="fira">Let’s work together</h1>
+                <h2 class="fira">Let’s work together</h2>
             </div>
             <div class="frame-2">
                 <h3 class="fira">{{ 'contact.introLabel' | translate }}</h3>
@@ -17,8 +17,9 @@
                 <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)">
                     <div class="field">
                         <label class="fira">{{ 'contact.name' | translate }}</label>
-                        <input #name="ngModel" minlength="1" name="name" [(ngModel)]="contactData.name" class="karla"
-                            type="text" required (focus)="nameFocused = true" (blur)="nameFocused = false"
+                        <input #name="ngModel" name="name" [(ngModel)]="contactData.name" class="karla" type="text"
+                            required minlength="4" pattern=".*[A-Za-zÄÖÜäöüß].*[A-Za-zÄÖÜäöüß].*"
+                            (focus)="nameFocused = true" (blur)="nameFocused = false"
                             [placeholder]="'contact.placeholderName' | translate" />
                         @if (!name.valid && submitAttempted && !nameFocused) {
                         <small class="hint karla">{{ 'contact.hintName' | translate }}</small>
@@ -27,7 +28,8 @@
                     <div class="field">
                         <label class="fira">{{ 'contact.mail' | translate }}</label>
                         <input #email="ngModel" name="email" [(ngModel)]="contactData.email" class="karla" type="email"
-                            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            required
+                            pattern="^[a-zA-Z0-9](?!.*\.\.)(?!.*@@)[a-zA-Z0-9._%+\-]{0,63}@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)+$"
                             (focus)="emailFocused = true" (blur)="emailFocused = false"
                             [placeholder]="'contact.placeholderMail' | translate" />
                         @if (!email.valid && submitAttempted && !emailFocused) {
@@ -36,7 +38,7 @@
                     </div>
                     <div class="field field-message">
                         <label class="fira">{{ 'contact.text' | translate }}</label>
-                        <textarea minlength="1" #message="ngModel" name="message" [(ngModel)]="contactData.message"
+                        <textarea minlength="10" #message="ngModel" name="message" [(ngModel)]="contactData.message"
                             class="textfield karla" required (focus)="messageFocused = true"
                             (blur)="messageFocused = false"
                             [placeholder]="'contact.placeholderText' | translate"></textarea>
@@ -77,7 +79,7 @@
                             </button>
                         </div>
                         <div class="successDiv">
-                             @if (messageSent) {
+                            @if (messageSent) {
                             <p class="success-message karla">
                                 {{ 'contact.success' | translate }}
                             </p>

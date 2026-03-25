@@ -1,8 +1,7 @@
 <section class="references">
-    <h1 class="fira">Was meine Kollegen über mich sagen</h1>
+    <h2 class="fira">Was meine Kollegen über mich sagen</h2>
     <div class="reference-boxes" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
-        <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
-        <div class="reference-box side">
+        <div class="reference-box side side-left">
             <p class="karla">{{ refs[leftIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
@@ -17,8 +16,7 @@
                 <p class="karla">{{ refs[currentIndex].authorKey | translate }}</p>
             </div>
         </div>
-        <div class="reference-box side">
-            <img class="quote-fixed" src="./../../assets/icons/left-quote.svg" alt="">
+        <div class="reference-box side side-right">
             <p class="karla">{{ refs[rightIndex].textKey | translate }}</p>
             <div class="ref-footer">
                 <div class="ref-line"></div>
