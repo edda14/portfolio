@@ -336,19 +336,39 @@ textarea:-webkit-autofill:focus {
     display: none;
 }
 
-.successDiv {
-    height: 24px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 0px;
+.success-toast {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 32px;
+  z-index: 999;
 
-    >p {
-        color: #9d5977;
-    }
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+
+  background: #9d5977;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+
+  opacity: 0;
+  animation: slideIn 300ms ease forwards;
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media (max-width: 1400px) {
     .contact-div {
         align-items: center;
@@ -416,7 +436,7 @@ textarea:-webkit-autofill:focus {
         }
     }
 
-    .privacy{
+    .privacy {
         >p {
             font-size: 14px;
         }

@@ -19,10 +19,19 @@
                         <label class="fira">{{ 'contact.name' | translate }}</label>
                         <input #name="ngModel" name="name" [(ngModel)]="contactData.name" class="karla" type="text"
                             required minlength="4" pattern=".*[A-Za-zÄÖÜäöüß].*[A-Za-zÄÖÜäöüß].*"
-                            (focus)="nameFocused = true" (blur)="nameFocused = false"
+                            (focus)="nameFocused = true"
+                            (blur)="nameFocused = false; contactData.name = contactData.name.trim()"
                             [placeholder]="'contact.placeholderName' | translate" />
-                        @if (!name.valid && submitAttempted && !nameFocused) {
-                        <small class="hint karla">{{ 'contact.hintName' | translate }}</small>
+                        @if (!nameFocused && submitAttempted && name.invalid) {
+                        <small class="hint karla">
+                            @if (name.errors?.['required']) {
+                            {{ 'contact.hintName' | translate }}
+                            } @else if (name.errors?.['minlength']) {
+                            {{ 'contact.hintNameMinlength' | translate }}
+                            } @else if (name.errors?.['pattern']) {
+                            {{ 'contact.hintNamePattern' | translate }}
+                            }
+                        </small>
                         }
                     </div>
                     <div class="field">
@@ -32,8 +41,14 @@
                             pattern="^[a-zA-Z0-9](?!.*\.\.)(?!.*@@)[a-zA-Z0-9._%+\-]{0,63}@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)+$"
                             (focus)="emailFocused = true" (blur)="emailFocused = false"
                             [placeholder]="'contact.placeholderMail' | translate" />
-                        @if (!email.valid && submitAttempted && !emailFocused) {
-                        <small class="hint karla">{{ 'contact.hintMail' | translate }}</small>
+                        @if (!emailFocused && submitAttempted && email.invalid) {
+                        <small class="hint karla">
+                            @if (email.errors?.['required']) {
+                            {{ 'contact.hintMail' | translate }}
+                            } @else if (email.errors?.['pattern'] || email.errors?.['email']) {
+                            {{ 'contact.hintMailInvalid' | translate }}
+                            }
+                        </small>
                         }
                     </div>
                     <div class="field field-message">
@@ -65,7 +80,6 @@
                                     <a href="/privacy-policy" class="link fira"
                                         aria-label="Datenschutzerklärung öffnen">
                                         {{ 'contact.privacy2' | translate }}</a>
-                                    {{ 'contact.privacy3' | translate }}
                                 </p>
                             </div>
 
@@ -78,13 +92,11 @@
                                 <span class="button-text">Say Hello ;)</span>
                             </button>
                         </div>
-                        <div class="successDiv">
-                            @if (messageSent) {
-                            <p class="success-message karla">
-                                {{ 'contact.success' | translate }}
-                            </p>
-                            }
+                        @if (messageSent) {
+                        <div class="success-toast karla">
+                            {{ 'contact.success' | translate }}
                         </div>
+                        }
                     </div>
                 </form>
             </div>

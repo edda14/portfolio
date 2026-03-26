@@ -4,7 +4,8 @@
     align-items: center;
     height: auto;
     padding: 100px 0px;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     background: radial-gradient(circle 600px at 0% 50%,
             rgba(248, 202, 222, 1),
             rgba(236, 224, 208, 1));
@@ -44,7 +45,7 @@
     justify-content: start;
     gap: 26px;
 
-    >h2 {
+    >h3 {
         font-weight: 700;
         font-size: 64px;
         letter-spacing: 2;
@@ -77,7 +78,7 @@
         flex-direction: row;
     }
 
-    >h3 {
+    .offer {
         font-size: 24px;
         font-weight: 700;
         line-height: 120%;
@@ -278,7 +279,7 @@
         height: auto;
         width: auto;
 
-        >h2 {
+        >h3 {
             font-size: 54px;
         }
     }
@@ -314,7 +315,7 @@
         max-width: 100%;
         gap: 18px;
 
-        >h2 {
+        >h3 {
             font-size: 42px;
         }
 
@@ -326,7 +327,7 @@
     .skill-box-contact {
         width: 100%;
 
-        >h3 {
+        .offer {
             font-size: 20px;
         }
     }

@@ -2,18 +2,30 @@
     background:
         linear-gradient(50deg,
             rgb(236, 224, 208) 50%,
-            rgb(248, 202, 222) 110%)
+            rgb(248, 202, 222) 110%);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.imprint {
+    flex: 1;
 }
 
 .imprint-content {
-    padding: 0 120px;
+    padding: 42px 120px 64px;
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 64px;
+    justify-content: flex-start;
+    gap: 32px;
     text-align: center;
 
     >h1 {
