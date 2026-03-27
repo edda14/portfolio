@@ -76,6 +76,7 @@
     "hintMailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "text": "Worum geht es?",
     "hintText": "Wobei brauchst du Hilfe?",
+    "hintMessageShort": "Bitte gib mindestens 20 Zeichen ein.",
     "privacy": "ich akzeptiere die",
     "privacy2": "Datenschutzerklärung",
     "hintPrivacy": "Bitte akzeptiere die Datenschutzerklärung",

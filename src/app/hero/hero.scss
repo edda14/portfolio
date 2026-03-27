@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: clip;
     justify-content: center;
     gap: 12px;
     text-align: center;
@@ -34,17 +35,16 @@
     z-index: 999;
 }
 
-
 .hero-banner {
     position: absolute;
     left: 50%;
     bottom: 55px;
     transform: translateX(-50%) rotate(-3deg);
-    width: 99.90%;
+    width: 99.6%;
     height: 64px;
     display: flex;
     align-items: center;
-    overflow-x: clip;
+    overflow-y: clip;
     background: rgba(0, 0, 0, 0.075);
     backdrop-filter: blur(2px);
     z-index: 2;
@@ -197,6 +197,9 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
+    >img {
+        transition: filter 0.2s ease;
+    }
 }
 
 .contact-icon,
@@ -209,13 +212,12 @@
     transition: opacity 0.2s ease;
 }
 
-.hover-dot:hover .contact-icon-hover {
-    opacity: 1;
+.hover-dot {
+>img:hover {
+filter: brightness(0) saturate(100%);
+}
 }
 
-.hover-dot:hover .contact-icon {
-    opacity: 0;
-}
 
 .contact-icon-hover {
     position: absolute;
@@ -223,13 +225,12 @@
     left: 0;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease;
 }
 
 .hover-dot::after {
     content: "";
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     right: -10px;
     width: 6px;
     height: 6px;
@@ -266,11 +267,34 @@
     }
 
     .email-mobile {
-        display: contents;
-
-        >img {
-            width: 32px;
+        >img{
+        transition: filter 0.2s ease;
         }
+    }
+
+    .email-mobile:hover {
+        >img {
+        filter: brightness(0) saturate(100%);
+        }
+    }
+
+   .email-mobile {
+    display: inline-block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+}
+
+.email-mobile > img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 5px auto;
+}
+
+    .email-mobile
+    >img:hover {
+        filter: brightness(0);
     }
 
     .hero-line-left {

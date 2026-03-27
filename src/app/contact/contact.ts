@@ -1,11 +1,12 @@
-import { Component, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, inject, ChangeDetectorRef, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -14,6 +15,8 @@ export class Contact {
   http = inject(HttpClient);
 
   cdr = inject(ChangeDetectorRef);
+
+  @ViewChild('messageEl') messageEl!: ElementRef<HTMLTextAreaElement>;
 
   messageSent = false;
 
@@ -85,21 +88,29 @@ export class Contact {
 
 
   // Handles successful form submission
-handleSuccess(ngForm: NgForm) {
-  this.resetForm(ngForm);
-  this.messageSent = true;
-  this.cdr.detectChanges();
+  handleSuccess(ngForm: NgForm) {
+    this.resetForm(ngForm);
+    this.messageSent = true;
+    // 👉 textarea Höhe zurücksetzen
+    if (this.messageEl) {
+      this.messageEl.nativeElement.style.height = 'auto';
+    }
 
-  window.setTimeout(() => {
-    this.messageSent = false;
-    this.cdr.detectChanges();
-  }, 2000);
-}
+    window.setTimeout(() => {
+      this.messageSent = false;
+    }, 3000);
+  }
 
   // Resets form and validation state
   resetForm(ngForm: NgForm) {
     ngForm.resetForm();
     this.submitAttempted = false;
+  }
+
+  autoResize(event: Event) {
+    const textarea = event.target as HTMLTextAreaElement;
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
   }
 
 

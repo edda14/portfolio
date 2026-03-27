@@ -53,12 +53,21 @@
                     </div>
                     <div class="field field-message">
                         <label class="fira">{{ 'contact.text' | translate }}</label>
-                        <textarea minlength="10" #message="ngModel" name="message" [(ngModel)]="contactData.message"
-                            class="textfield karla" required (focus)="messageFocused = true"
-                            (blur)="messageFocused = false"
-                            [placeholder]="'contact.placeholderText' | translate"></textarea>
-                        @if (!message.valid && submitAttempted && !messageFocused) {
-                        <small class="hint texterea-hint karla">{{ 'contact.hintText' | translate }}</small>
+                        <textarea #messageEl minlength="20" #message="ngModel" name="message"
+                            [(ngModel)]="contactData.message" class="textfield karla" required
+                            (focus)="messageFocused = true" (blur)="messageFocused = false" (input)="autoResize($event)"
+                            [placeholder]="'contact.placeholderText' | translate">
+                        </textarea>
+                        @if (message.errors?.['required'] && submitAttempted && !messageFocused) {
+                        <small class="hint karla">
+                            {{ 'contact.hintText' | translate }}
+                        </small>
+                        }
+
+                        @if (message.errors?.['minlength'] && submitAttempted && !messageFocused) {
+                        <small class="hint karla">
+                            {{ 'contact.hintMessageShort' | translate }}
+                        </small>
                         }
                     </div>
                     <div class="form-check">
@@ -77,7 +86,7 @@
                             <div class="check-box-text">
                                 <p class="karla privacy-text">
                                     {{ 'contact.privacy' | translate }}
-                                    <a href="/privacy-policy" class="link fira"
+                                    <a routerLink="/privacy-policy" class="link fira"
                                         aria-label="Datenschutzerklärung öffnen">
                                         {{ 'contact.privacy2' | translate }}</a>
                                 </p>
@@ -92,11 +101,10 @@
                                 <span class="button-text">Say Hello ;)</span>
                             </button>
                         </div>
-                        @if (messageSent) {
-                        <div class="success-toast karla">
+                        <div class="success-toast karla" [style.display]="messageSent ? 'flex' : 'none'">
                             {{ 'contact.success' | translate }}
+                            <span class="close-btn" (click)="messageSent = false">✕</span>
                         </div>
-                        }
                     </div>
                 </form>
             </div>

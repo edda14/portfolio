@@ -76,6 +76,7 @@
   "hintMailInvalid": "Please enter a valid email address.",
   "text": "How can i help you?",
   "hintText": "What do you need to develop?",
+  "hintMessageShort": "Please enter at least 20 characters.",
   "privacy": "I agree the",
   "privacy2": "privacy policy",
   "hintPrivacy": "please accept the privacy policy.",
