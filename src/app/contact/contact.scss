@@ -31,8 +31,11 @@
     gap: 20px;
 
     >p {
+        color: #9d5977;
+        font-weight: 500;
+        font-style: normal;
         font-size: 24px;
-        color: #9d5977
+        line-height: 100%;
     }
 
     >h2 {
@@ -338,34 +341,34 @@ textarea:-webkit-autofill:focus {
 }
 
 .success-toast {
-  position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: 50%;
-  z-index: 999;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 50%;
+    z-index: 999;
 
-  width: auto;
-  max-width: 500px;
-  margin: 0 auto;
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
 
-  background: #9d5977;
-  color: white;
-  padding: 16px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
+    background: #9d5977;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .close-btn {
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .close-btn:hover {
