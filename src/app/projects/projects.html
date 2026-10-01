@@ -10,30 +10,31 @@
                     (mouseleave)="showJoin = false">
                     <h3 class="fira">Join</h3>
                     <p class="tech karla">
-                        <span>Angular</span>
-                        <span>TypeScript</span>
                         <span>HTML</span>
                         <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                        <span>n8n</span>
+                    </p>
+                </div>
+                <div class="project" (click)="openProject(1)" (mouseenter)="showDaBubble = true"
+                    (mouseleave)="showDaBubble = false">
+                    <h3 class="fira">DaBubble</h3>
+                    <p class="tech karla">
+                        <span>HTML</span>
+                        <span>SCSS</span>
+                        <span>Angular</span>
                         <span>Firebase</span>
                     </p>
                 </div>
-                <div class="project" (click)="openProject(1)" (mouseenter)="showPokedex = true"
-                    (mouseleave)="showPokedex = false">
-                    <h3 class="fira">Pokedex</h3>
+                <div class="project border" (click)="openProject(2)" (mouseenter)="showPoll = true"
+                    (mouseleave)="showPoll = false">
+                    <h3 class="fira">Poll App</h3>
                     <p class="tech karla">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>API</span>
-                    </p>
-                </div>
-                <div class="project border" (click)="openProject(2)" (mouseenter)="showInstagram = true"
-                    (mouseleave)="showInstagram = false">
-                    <h3 class="fira">Instagram-clon</h3>
-                    <p class="tech karla">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>Angular</span>
                     </p>
                 </div>
                 <div class="project border-bottom" (click)="openProject(3)" (mouseenter)="showElPollo = true"
@@ -48,13 +49,13 @@
             </div>
             <div class="project-pics">
                 <div class="join project-pic" [class.is-visible]="showJoin">
-                    <img src="./../../assets/img/poject-pics/Join.jpg" alt="">
+                    <img src="./../../assets/img/poject-pics/Join.png" alt="">
                 </div>
-                <div class="pokedex project-pic" [class.is-visible]="showPokedex">
-                    <img src="./../../assets/img/poject-pics/pokedex.png" alt="">
+                <div class="pokedex project-pic" [class.is-visible]="showDaBubble">
+                    <img src="./../../assets/img/poject-pics/Dabubble.png" alt="">
                 </div>
-                <div class="instagram project-pic" [class.is-visible]="showInstagram">
-                    <img src="./../../assets/img/poject-pics/instagram-clon.png" alt="">
+                <div class="instagram project-pic" [class.is-visible]="showPoll">
+                    <img src="./../../assets/img/poject-pics/poll-app.png" alt="">
                 </div>
                 <div class="elpollo project-pic" [class.is-visible]="showElPollo">
                     <img src="./../../assets/img/poject-pics/el-pollo-loco.png" alt="">

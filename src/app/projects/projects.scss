@@ -113,7 +113,7 @@
     >img {
         width: 295px;
         height: 192px;
-        border-radius: 16px;
+        border-radius: 16px !important;
         z-index: 2 !important;
     }
 
@@ -123,6 +123,7 @@
         content: "";
         width: 295px;
         height: 192px;
+        border-radius: 16px !important;
         background: repeating-linear-gradient(135deg,
                 transparent 0px,
                 transparent 10px,
@@ -243,7 +244,7 @@
 
 @media (max-width: 500px) {
     .projects {
-        padding: 100px 18px;
+        padding: 40px 18px;
     }
 
     .featured-projects {

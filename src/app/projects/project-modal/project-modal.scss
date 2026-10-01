@@ -84,6 +84,7 @@
 
         &:hover {
             transform: scale(120%);
+            cursor: pointer;
             background-image: url(./../../../assets/icons/xmark-pink.svg);
         }
     }
@@ -364,6 +365,7 @@
     .img-swap {
         >img {
             width: 250px;
+            border-radius: 10px;
         }
     }
 

@@ -38,9 +38,9 @@
     "btn": "Next project"
   },
   "projectDescriptions": {
-    "join": "Join is a web-based task management tool built around the Kanban principle. Tasks can be created, organized, and moved through different workflow stages.",
-    "pokedex": "In this project I built an interactive Pokédex web app. Users can browse Pokémon, apply filters, and view detailed information.",
-    "instagram": "In this project I recreated Instagram’s design in the frontend as closely as possible. The focus was on UI implementation; likes and comments are stored locally in the browser.",
+    "join": "Join is a Kanban board for creating, organizing, and moving tasks through different workflow stages using drag and drop. Login and file uploads extend its task management and collaboration features. An integrated issue collector powered by n8n automates the processing of email requests and tickets.",
+    "daBubble": "DABubble is a real-time team messaging platform featuring topic-based channels, direct messages, and organized conversation threads. @mentions, emoji reactions, and search across messages, channels, and people keep communication efficient. Google sign-in, guest access, and a responsive interface make it easy to get started on desktop and mobile.",
+    "instagram": "Poll App is a modern survey platform that allows users to create, share, and analyze their own surveys. Built with Angular and Supabase, it supports single- and multiple-choice questions, deadlines, and live results.",
     "pollo": "In this project I built a classic jump-and-run game using JavaScript. The focus was on game logic, collisions, animations, and smooth gameplay in the browser."
   },
   "references": {

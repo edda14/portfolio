@@ -22,8 +22,8 @@ type Project = {
 })
 export class Projects {
   showJoin = false;
-  showPokedex = false;
-  showInstagram = false;
+  showDaBubble = false;
+  showPoll = false;
   showElPollo = false;
 
   // List of portfolio projects displayed in the projects section
@@ -31,32 +31,32 @@ export class Projects {
     {
       nr: '01',
       title: 'Join',
-      stack: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase'],
-      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/typescript.svg', 'assets/icons/angular.svg', 'assets/icons/firebase.svg'],
+      stack: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'n8n'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg','assets/icons/firebase.svg', 'assets/icons/n8n-color.svg'],
       descriptionKey: 'projectDescriptions.join',
-      imageUrl: 'assets/img/poject-pics/Join.jpg',
-      githubUrl: 'https://github.com/edda14/Joyn-Juls',
-      liveUrl: 'https://edda14.github.io/Joyn-Juls/'
+      imageUrl: 'assets/img/poject-pics/Join.png',
+      githubUrl: 'https://github.com/edda14/Join',
+      liveUrl: 'https://join-liard.vercel.app/'
     },
     {
       nr: '02',
-      title: 'Pokedex',
-      stack: ['HTML', 'CSS', 'JavaScript', 'API'],
-      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg', 'assets/icons/api.svg'],
-      descriptionKey: 'projectDescriptions.pokedex',
-      imageUrl: 'assets/img/poject-pics/pokedex.png',
-      githubUrl: 'https://github.com/edda14/Pokedex',
-      liveUrl: 'https://edda14.github.io/Pokedex/'
+      title: 'DaBubble',
+      stack: ['HTML', 'SCSS', 'Angular', 'Firebase'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/scss-svgrepo-com.svg', 'assets/icons/angular.svg', 'assets/icons/firebase.svg'],
+      descriptionKey: 'projectDescriptions.daBubble',
+      imageUrl: 'assets/img/poject-pics/Dabubble.png',
+      githubUrl: 'https://github.com/edda14/DABubble',
+      liveUrl: 'https://da-bubble-zc3q-r533gtanh-julsino-s-projects.vercel.app/login'
     },
     {
       nr: '03',
-      title: 'Instagram-Clon',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/java-script.svg'],
+      title: 'Poll-App',
+      stack: ['HTML', 'CSS', 'TypeScript', 'Angular'],
+      stackIMG: ['assets/icons/html.svg', 'assets/icons/css-3.svg', 'assets/icons/typescript.svg', 'assets/icons/angular.svg', ],
       descriptionKey: 'projectDescriptions.instagram',
-      imageUrl: 'assets/img/poject-pics/instagram-clon.png',
-      githubUrl: 'https://github.com/edda14/Instiminsti',
-      liveUrl: 'https://edda14.github.io/Instiminsti/'
+      imageUrl: 'assets/img/poject-pics/poll-app.png',
+      githubUrl: 'https://github.com/edda14/poll-app',
+      liveUrl: 'https://poll-app-seven-omega.vercel.app/'
     },
     {
       nr: '04',
@@ -66,7 +66,7 @@ export class Projects {
       descriptionKey: 'projectDescriptions.pollo',
       imageUrl: 'assets/img/poject-pics/el-pollo-loco.png',
       githubUrl: 'https://github.com/edda14/elpollo',
-      liveUrl: 'https://edda14.github.io/elpollo/'
+      liveUrl: 'https://elpollo.vercel.app'
     }
   ];
 

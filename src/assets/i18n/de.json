@@ -38,9 +38,9 @@
     "btn": "Nächstes Projekt"
   },
   "projectDescriptions": {
-    "join": "Join ist ein webbasiertes Task-Management-Tool, das sich am Kanban-Prinzip orientiert. Aufgaben lassen sich erstellen, organisieren und in verschiedene Arbeitsphasen verschieben.",
-    "pokedex": "In diesem Projekt habe ich eine interaktive Pokédex-Webanwendung umgesetzt. Nutzer können die Pokémon durchsuchen, filtern und Detailinformationen abrufen.",
-    "instagram": "In diesem Projekt habe ich das Instagram-Design detailgetreu im Frontend nachgebaut. Fokus lag auf der UI-Umsetzung, Interaktionen wie Likes und Kommentare werden lokal im Browser gespeichert.",
+    "join": "Join ist ein Kanban-Board, mit dem sich Aufgaben erstellen, organisieren und per Drag-and-drop durch verschiedene Bearbeitungsphasen bewegen lassen. Login und Dateiuploads erweitern die Aufgabenverwaltung und Zusammenarbeit. Ein angebundener Issue Collector mit n8n automatisiert zusätzlich die Verarbeitung von E-Mail-Anfragen und Tickets.",
+    "daBubble": "DABubble ist eine Chat-Plattform für Teamkommunikation in Echtzeit. Mit themenbezogenen Channels, Direktnachrichten und übersichtlichen Threads. @-Erwähnungen, Emoji-Reaktionen und eine Suche nach Nachrichten, Channels und Personen erleichtern den Austausch. Google-Login, Gastzugang und eine responsive Oberfläche ermöglichen einen unkomplizierten Einstieg auf Desktop und Smartphone.",
+    "instagram": "Die Poll App ist eine moderne Umfrageplattform, mit der Nutzer eigene Umfragen erstellen, teilen und auswerten können. Die Anwendung wurde mit Angular und Supabase entwickelt und unterstützt Single- sowie Multiple-Choice-Fragen, Deadlines und Live-Ergebnisse.",
     "pollo": "In diesem Projekt habe ich ein klassisches Jump-and-Run-Spiel mit JavaScript umgesetzt. Fokus lag auf Spiellogik, Kollisionen, Animationen und einem flüssigen Spielerlebnis im Browser."
   },
   "references": {
