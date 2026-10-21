@@ -23,10 +23,10 @@
                         </div>
                     </div>
                     <div class="actions">
-                        <a *ngIf="p.githubUrl" class="btn karla" [href]="p.githubUrl" target="_blank">
+                        <a *ngIf="p.githubUrl" class="btn karla" [href]="p.githubUrl" [attr.data-umami-event]="'github_' + p.title" target="_blank">
                             GitHub <img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
                         </a>
-                        <a *ngIf="p.liveUrl" class="btn karla" [href]="p.liveUrl" target="_blank">
+                        <a *ngIf="p.liveUrl" class="btn karla" [href]="p.liveUrl" [attr.data-umami-event]="'demo_' + p.title" target="_blank">
                             Live Test<img src="./../../../assets/icons/pfeil-nach-unten.png" alt="">
                         </a>
                     </div>
